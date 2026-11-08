@@ -1,0 +1,365 @@
+{
+    "architecture": "x86_64",
+    "devicePixelRatio": 1,
+    "fixtureSha256": "d29466c75ceec0da0de49cd8448dd2656f4716f076516c4cfc4f94511181527f",
+    "kind": "native",
+    "os": "Ubuntu 26.04.1 LTS",
+    "pages": [
+        {
+            "bindings": {
+                "autostart": {
+                    "enabled": true,
+                    "font": {
+                        "family": "DejaVu Sans",
+                        "italic": false,
+                        "pixelSize": 14,
+                        "weight": 400
+                    },
+                    "rect": {
+                        "height": 18,
+                        "width": 18,
+                        "x": 363,
+                        "y": 347
+                    },
+                    "value": true,
+                    "visible": true
+                },
+                "duration": {
+                    "enabled": true,
+                    "font": {
+                        "family": "Nimbus Sans [UKWN]",
+                        "italic": false,
+                        "pixelSize": 15,
+                        "weight": 400
+                    },
+                    "rect": {
+                        "height": 32,
+                        "width": 70,
+                        "x": 274,
+                        "y": 159
+                    },
+                    "value": 5,
+                    "visible": true
+                },
+                "logging": {
+                    "enabled": true,
+                    "font": {
+                        "family": "DejaVu Sans",
+                        "italic": false,
+                        "pixelSize": 14,
+                        "weight": 400
+                    },
+                    "rect": {
+                        "height": 18,
+                        "width": 18,
+                        "x": 363,
+                        "y": 408
+                    },
+                    "value": false,
+                    "visible": true
+                },
+                "mode": {
+                    "enabled": false,
+                    "font": {
+                        "family": "Nimbus Sans [UKWN]",
+                        "italic": false,
+                        "pixelSize": 14,
+                        "weight": 400
+                    },
+                    "rect": {
+                        "height": 32,
+                        "width": 114,
+                        "x": 267,
+                        "y": 220
+                    },
+                    "value": "walk-center",
+                    "visible": true
+                },
+                "threshold": {
+                    "enabled": true,
+                    "font": {
+                        "family": "Nimbus Sans [UKWN]",
+                        "italic": false,
+                        "pixelSize": 15,
+                        "weight": 400
+                    },
+                    "rect": {
+                        "height": 32,
+                        "width": 70,
+                        "x": 274,
+                        "y": 98
+                    },
+                    "value": 45,
+                    "visible": true
+                }
+            },
+            "height": 520,
+            "id": "settings",
+            "image": "native-settings.png",
+            "visibleLabels": [
+                "胖猫暂停一下（PurrPause） 设置",
+                "屏幕使用时间",
+                "连续使用多久后提醒休息",
+                "分钟",
+                "休息时长",
+                "每次休息持续多久",
+                "分钟",
+                "动画模式",
+                "猫咪出现的方式",
+                "素材目录",
+                "激活后可自定义素材目录",
+                "开机自动启动",
+                "系统启动时自动运行 胖猫暂停一下（PurrPause）",
+                "运行日志",
+                "记录运行信息到日志文件，用于排查问题（默认关闭）"
+            ],
+            "width": 440
+        },
+        {
+            "bindings": {
+                "enabled": {
+                    "enabled": true,
+                    "font": {
+                        "family": "DejaVu Sans",
+                        "italic": false,
+                        "pixelSize": 14,
+                        "weight": 400
+                    },
+                    "rect": {
+                        "height": 22,
+                        "width": 40,
+                        "x": 445,
+                        "y": 114
+                    },
+                    "value": true,
+                    "visible": true
+                },
+                "sourceCount": {
+                    "enabled": true,
+                    "font": {
+                        "family": "DejaVu Sans",
+                        "italic": false,
+                        "pixelSize": 12,
+                        "weight": 500
+                    },
+                    "rect": {
+                        "height": 16,
+                        "width": 25,
+                        "x": 75,
+                        "y": 184
+                    },
+                    "value": "1",
+                    "visible": true
+                },
+                "sourceName": {
+                    "enabled": true,
+                    "font": {
+                        "family": "Nimbus Sans [URW ]",
+                        "italic": false,
+                        "pixelSize": 15,
+                        "weight": 600
+                    },
+                    "rect": {
+                        "height": 34,
+                        "width": 359,
+                        "x": 39,
+                        "y": 229
+                    },
+                    "value": "绘家科技",
+                    "visible": true
+                },
+                "sourceUrl": {
+                    "enabled": true,
+                    "font": {
+                        "family": "Nimbus Sans [UKWN]",
+                        "italic": false,
+                        "pixelSize": 14,
+                        "weight": 400
+                    },
+                    "rect": {
+                        "height": 32,
+                        "width": 447,
+                        "x": 39,
+                        "y": 298
+                    },
+                    "value": "https://example.com/todos",
+                    "visible": true
+                }
+            },
+            "height": 660,
+            "id": "message-settings",
+            "image": "native-message-settings.png",
+            "visibleLabels": [
+                "消息提醒设置",
+                "配置一个或多个第三方接口源，胖猫会轮询待办并用小火箭提醒你。",
+                "启用消息提醒",
+                "关闭后停止所有接口源的轮询并隐藏待办角标",
+                "接口源",
+                "1",
+                "待办接口地址（完整 URL）",
+                "完整的待办列表接口地址，PurrPause 只在其后追加 limit/offset",
+                "推荐",
+                "https://你的域名/purr-pause/v1/todos",
+                "更多",
+                "轮询间隔 / 每源条数 / 小火箭素材"
+            ],
+            "width": 540
+        },
+        {
+            "bindings": {
+                "refresh": {
+                    "enabled": true,
+                    "font": {
+                        "family": "Nimbus Sans [UKWN]",
+                        "italic": false,
+                        "pixelSize": 14,
+                        "weight": 700
+                    },
+                    "rect": {
+                        "height": 36,
+                        "width": 74,
+                        "x": 446,
+                        "y": 72
+                    },
+                    "value": "刷新",
+                    "visible": true
+                }
+            },
+            "height": 720,
+            "id": "message-list",
+            "image": "native-message-list.png",
+            "visibleLabels": [
+                "待办消息",
+                "待办消息（3）",
+                "最后刷新 2026/11/7 14:30:00",
+                "待审核：十一月项目进度报告",
+                "绘家科技",
+                "请查看本周进展和下周工作安排，确认后完成审批。",
+                "2026-11-07T14:30:00+08:00",
+                "NORMAL",
+                "待审核：十一月项目进度报告",
+                "绘家科技",
+                "请查看本周进展和下周工作安排，确认后完成审批。",
+                "2026-11-07T14:30:00+08:00",
+                "NORMAL",
+                "待审核：十一月项目进度报告",
+                "绘家科技",
+                "请查看本周进展和下周工作安排，确认后完成审批。",
+                "2026-11-07T14:30:00+08:00",
+                "NORMAL"
+            ],
+            "width": 560
+        },
+        {
+            "bindings": {
+                "license": {
+                    "enabled": true,
+                    "font": {
+                        "family": "DejaVu Sans",
+                        "italic": false,
+                        "pixelSize": 12,
+                        "weight": 400
+                    },
+                    "rect": {
+                        "height": 17,
+                        "width": 112,
+                        "x": 44,
+                        "y": 117
+                    },
+                    "value": "试用中（剩余 7 天）",
+                    "visible": true
+                },
+                "machine": {
+                    "enabled": true,
+                    "font": {
+                        "family": "DejaVu Sans Mono",
+                        "italic": false,
+                        "pixelSize": 14,
+                        "weight": 400
+                    },
+                    "rect": {
+                        "height": 22,
+                        "width": 155,
+                        "x": 283,
+                        "y": 164
+                    },
+                    "value": "0123456789abcdef",
+                    "visible": true
+                },
+                "serial": {
+                    "enabled": true,
+                    "font": {
+                        "family": "DejaVu Sans Mono",
+                        "italic": false,
+                        "pixelSize": 13,
+                        "weight": 400
+                    },
+                    "rect": {
+                        "height": 80,
+                        "width": 452,
+                        "x": 44,
+                        "y": 245
+                    },
+                    "value": "",
+                    "visible": true
+                }
+            },
+            "height": 540,
+            "id": "activation",
+            "image": "native-activation.png",
+            "visibleLabels": [
+                "激活 胖猫暂停一下（PurrPause）",
+                "授权状态",
+                "试用中（剩余 7 天）",
+                "机器码",
+                "将此机器码发送给开发者获取序列号",
+                "序列号"
+            ],
+            "width": 540
+        },
+        {
+            "bindings": {
+            },
+            "height": 570,
+            "id": "rules",
+            "image": "native-rules.png",
+            "visibleLabels": [
+                "计时规则说明",
+                "优先级",
+                "条件",
+                "行为",
+                "1",
+                "动画正在显示",
+                "跳过，不检测；解锁时若锁屏超过 10 分钟则计时归零",
+                "2",
+                "用户手动暂停监控",
+                "跳过，不检测",
+                "3",
+                "屏幕已锁定",
+                "跳过，不检测",
+                "4",
+                "系统休眠后唤醒",
+                "休眠超过 10 分钟则计时归零；短时休眠继续累计",
+                "5",
+                "距上次鼠标/键盘操作 > 10 分钟",
+                "计时归零（视为已休息）",
+                "6",
+                "距上次鼠标/键盘操作 < 3 分钟",
+                "计时 +10 秒（视为活跃）",
+                "7",
+                "距上次鼠标/键盘操作 3~10 分钟",
+                "不累加也不归零（暂停）",
+                "8",
+                "累计活跃时间 ≥ 设定阈值",
+                "触发猫咪动画",
+                "每 10 秒检测一次，按优先级从上到下判断。"
+            ],
+            "width": 950
+        }
+    ],
+    "platform": "offscreen",
+    "qtVersion": "6.10.2",
+    "requestedFont": "DejaVu Sans",
+    "schemaVersion": 1,
+    "timezone": "Asia/Shanghai"
+}

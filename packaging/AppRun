@@ -1,0 +1,37 @@
+#!/bin/sh
+set -eu
+
+# The AppImage runtime sets APPDIR and APPIMAGE. The same launcher also works
+# after --appimage-extract, where APPIMAGE intentionally remains unset.
+app_dir="${APPDIR:-$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)}"
+export APPDIR="$app_dir"
+# qt.conf and each ELF's relative RUNPATH select bundled dependencies. Avoid
+# exporting a library path that could break a host browser/file manager opened
+# through QDesktopServices with a different Qt version.
+unset LD_LIBRARY_PATH QT_PLUGIN_PATH QT_QPA_PLATFORM_PLUGIN_PATH
+# Fontconfig 2.13 resolves relative <dir> entries against the working directory,
+# so write an absolute, XML-escaped font path in a per-AppDir cache file.
+font_cache="${XDG_CACHE_HOME:-$HOME/.cache}/purr-pause"
+mkdir -p "$font_cache"
+font_key="$(printf '%s' "$app_dir" | cksum | cut -d ' ' -f 1)"
+font_xml="$(printf '%s' "$app_dir/usr/share/fonts" | sed 's/\&/\&amp;/g; s/</\&lt;/g; s/>/\&gt;/g')"
+font_config="$font_cache/appimage-fonts-$font_key.conf"
+if [ ! -f "$font_config" ]; then
+    {
+        cat "$app_dir/usr/etc/fonts/fonts.conf"
+        printf '<dir>%s</dir>\n</fontconfig>\n' "$font_xml"
+    } > "$font_config.tmp.$$"
+    mv "$font_config.tmp.$$" "$font_config"
+fi
+export FONTCONFIG_FILE="$font_config"
+export QT_STYLE_OVERRIDE="${QT_STYLE_OVERRIDE:-Fusion}"
+# Use the host's current certificate store and local enterprise certificates.
+# Fall back to the bundled Ubuntu trust store on minimal desktop installations.
+if [ -z "${SSL_CERT_FILE:-}" ]; then
+    if [ -r /etc/ssl/certs/ca-certificates.crt ]; then
+        export SSL_CERT_FILE=/etc/ssl/certs/ca-certificates.crt
+    else
+        export SSL_CERT_FILE="$app_dir/usr/share/purr-pause/ca-certificates.crt"
+    fi
+fi
+exec "$app_dir/usr/bin/purr-pause" "$@"

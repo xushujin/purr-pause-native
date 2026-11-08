@@ -1,0 +1,25 @@
+=== 胖猫暂停一下（PurrPause） 自定义素材说明 ===
+
+将你的 .webm 视频文件放在此目录下即可替换内置素材。
+
+文件要求：
+  - 格式：WebM（VP9 编码，带 Alpha 通道实现透明背景）
+  - 背景：必须透明，否则会遮挡桌面
+  - 建议尺寸：宽高 200~500px
+
+需要提供两个文件：
+  - cat-walk.webm  → 猫走路动画（从右往左走，播放一次）
+  - cat-rest.webm  → 猫躺下/休息动画（循环播放）
+  - notify-rocket.webm → 小火箭消息提醒动画（可选，找不到时使用内置 SVG）
+
+如需使用其他文件名，请在设置中的 config.json 添加：
+  "walkVideo": "你的走路文件.webm"
+  "idleVideo": "你的躺下文件.webm"
+  "messageNotifyVideo": "你的小火箭文件.webm"
+
+制作建议：
+  - 使用 FFmpeg 导出带 Alpha 通道的 WebM：
+    ffmpeg -i input.mov -c:v libvpx-vp9 -pix_fmt yuva420p -b:v 2M output.webm
+  - 走路动画建议 2~4 秒，猫从画面右侧走到左侧
+  - 休息动画可以是猫趴着、打呼噜等循环动作
+  - 小火箭动画建议 240x240 左右，透明背景，火箭主体保持在画面中间

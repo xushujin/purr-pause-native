@@ -1,0 +1,42 @@
+[
+  {
+    "page": "settings",
+    "width": 440,
+    "height": 520,
+    "meanAbsoluteRgbError0To255": 5.870460372960373,
+    "pixelsWithAnyDifferencePercent": 83.53977272727273,
+    "pixelsWithAnyChannelDifferenceAbove8Percent": 8.638548951048952
+  },
+  {
+    "page": "message-settings",
+    "width": 540,
+    "height": 660,
+    "meanAbsoluteRgbError0To255": 6.53816404788627,
+    "pixelsWithAnyDifferencePercent": 58.72671156004489,
+    "pixelsWithAnyChannelDifferenceAbove8Percent": 11.657687991021325
+  },
+  {
+    "page": "message-list",
+    "width": 560,
+    "height": 720,
+    "meanAbsoluteRgbError0To255": 10.909325396825396,
+    "pixelsWithAnyDifferencePercent": 71.37748015873017,
+    "pixelsWithAnyChannelDifferenceAbove8Percent": 14.330109126984127
+  },
+  {
+    "page": "activation",
+    "width": 540,
+    "height": 540,
+    "meanAbsoluteRgbError0To255": 2.7890729309556472,
+    "pixelsWithAnyDifferencePercent": 65.92592592592592,
+    "pixelsWithAnyChannelDifferenceAbove8Percent": 4.122085048010974
+  },
+  {
+    "page": "rules",
+    "width": 950,
+    "height": 570,
+    "meanAbsoluteRgbError0To255": 5.310345337026778,
+    "pixelsWithAnyDifferencePercent": 48.50083102493075,
+    "pixelsWithAnyChannelDifferenceAbove8Percent": 8.628808864265928
+  }
+]

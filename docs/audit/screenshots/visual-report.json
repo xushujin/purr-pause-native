@@ -1,0 +1,641 @@
+{
+  "schemaVersion": 1,
+  "fixtureSha256": "d29466c75ceec0da0de49cd8448dd2656f4716f076516c4cfc4f94511181527f",
+  "captureValidation": "passed",
+  "pixelIdentity": false,
+  "interpretation": "Capture validation checks fixture data, dimensions and selected fields. Pixel, font and geometry differences are reported without masking or a parity pass threshold.",
+  "reference": {
+    "schemaVersion": 1,
+    "kind": "reference",
+    "electronVersion": "33.2.1",
+    "chromiumVersion": "130.0.6723.137",
+    "platform": "linux",
+    "os": "7.0.0-42-generic",
+    "architecture": "x64",
+    "timezone": "Asia/Shanghai",
+    "devicePixelRatio": 1,
+    "fixtureSha256": "d29466c75ceec0da0de49cd8448dd2656f4716f076516c4cfc4f94511181527f"
+  },
+  "native": {
+    "architecture": "x86_64",
+    "devicePixelRatio": 1,
+    "fixtureSha256": "d29466c75ceec0da0de49cd8448dd2656f4716f076516c4cfc4f94511181527f",
+    "kind": "native",
+    "os": "Ubuntu 26.04.1 LTS",
+    "platform": "offscreen",
+    "qtVersion": "6.10.2",
+    "requestedFont": "DejaVu Sans",
+    "schemaVersion": 1,
+    "timezone": "Asia/Shanghai"
+  },
+  "pages": [
+    {
+      "page": "settings",
+      "width": 440,
+      "height": 520,
+      "meanAbsoluteRgbError0To255": 5.870460372960373,
+      "pixelsWithAnyDifferencePercent": 83.53977272727273,
+      "pixelsWithAnyChannelDifferenceAbove8Percent": 8.638548951048952,
+      "bindings": {
+        "threshold": {
+          "reference": {
+            "value": 45,
+            "visible": true,
+            "enabled": true,
+            "rect": {
+              "x": 273.90625,
+              "y": 98,
+              "width": 70,
+              "height": 32
+            },
+            "font": {
+              "family": "Arial",
+              "pixelSize": 15.2,
+              "weight": 400,
+              "italic": false
+            }
+          },
+          "native": {
+            "enabled": true,
+            "font": {
+              "family": "Nimbus Sans [UKWN]",
+              "italic": false,
+              "pixelSize": 15,
+              "weight": 400
+            },
+            "rect": {
+              "height": 32,
+              "width": 70,
+              "x": 274,
+              "y": 98
+            },
+            "value": 45,
+            "visible": true
+          },
+          "nativeMinusReferenceRect": {
+            "x": 0.09375,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "nativeMinusReferenceFontSize": -0.1999999999999993
+        },
+        "duration": {
+          "reference": {
+            "value": 5,
+            "visible": true,
+            "enabled": true,
+            "rect": {
+              "x": 273.90625,
+              "y": 159,
+              "width": 70,
+              "height": 32
+            },
+            "font": {
+              "family": "Arial",
+              "pixelSize": 15.2,
+              "weight": 400,
+              "italic": false
+            }
+          },
+          "native": {
+            "enabled": true,
+            "font": {
+              "family": "Nimbus Sans [UKWN]",
+              "italic": false,
+              "pixelSize": 15,
+              "weight": 400
+            },
+            "rect": {
+              "height": 32,
+              "width": 70,
+              "x": 274,
+              "y": 159
+            },
+            "value": 5,
+            "visible": true
+          },
+          "nativeMinusReferenceRect": {
+            "x": 0.09375,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "nativeMinusReferenceFontSize": -0.1999999999999993
+        },
+        "mode": {
+          "reference": {
+            "value": "walk-center",
+            "visible": true,
+            "enabled": false,
+            "rect": {
+              "x": 267,
+              "y": 220,
+              "width": 114,
+              "height": 32
+            },
+            "font": {
+              "family": "Arial",
+              "pixelSize": 14.4,
+              "weight": 400,
+              "italic": false
+            }
+          },
+          "native": {
+            "enabled": false,
+            "font": {
+              "family": "Nimbus Sans [UKWN]",
+              "italic": false,
+              "pixelSize": 14,
+              "weight": 400
+            },
+            "rect": {
+              "height": 32,
+              "width": 114,
+              "x": 267,
+              "y": 220
+            },
+            "value": "walk-center",
+            "visible": true
+          },
+          "nativeMinusReferenceRect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "nativeMinusReferenceFontSize": -0.40000000000000036
+        },
+        "autostart": {
+          "reference": {
+            "value": true,
+            "visible": true,
+            "enabled": true,
+            "rect": {
+              "x": 363,
+              "y": 347,
+              "width": 18,
+              "height": 18
+            },
+            "font": {
+              "family": "Arial",
+              "pixelSize": 13.3333,
+              "weight": 400,
+              "italic": false
+            }
+          },
+          "native": {
+            "enabled": true,
+            "font": {
+              "family": "DejaVu Sans",
+              "italic": false,
+              "pixelSize": 14,
+              "weight": 400
+            },
+            "rect": {
+              "height": 18,
+              "width": 18,
+              "x": 363,
+              "y": 347
+            },
+            "value": true,
+            "visible": true
+          },
+          "nativeMinusReferenceRect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "nativeMinusReferenceFontSize": 0.6667000000000005
+        },
+        "logging": {
+          "reference": {
+            "value": false,
+            "visible": true,
+            "enabled": true,
+            "rect": {
+              "x": 363,
+              "y": 408,
+              "width": 18,
+              "height": 18
+            },
+            "font": {
+              "family": "Arial",
+              "pixelSize": 13.3333,
+              "weight": 400,
+              "italic": false
+            }
+          },
+          "native": {
+            "enabled": true,
+            "font": {
+              "family": "DejaVu Sans",
+              "italic": false,
+              "pixelSize": 14,
+              "weight": 400
+            },
+            "rect": {
+              "height": 18,
+              "width": 18,
+              "x": 363,
+              "y": 408
+            },
+            "value": false,
+            "visible": true
+          },
+          "nativeMinusReferenceRect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "nativeMinusReferenceFontSize": 0.6667000000000005
+        }
+      }
+    },
+    {
+      "page": "message-settings",
+      "width": 540,
+      "height": 660,
+      "meanAbsoluteRgbError0To255": 6.53816404788627,
+      "pixelsWithAnyDifferencePercent": 58.72671156004489,
+      "pixelsWithAnyChannelDifferenceAbove8Percent": 11.657687991021325,
+      "bindings": {
+        "enabled": {
+          "reference": {
+            "value": true,
+            "visible": true,
+            "enabled": true,
+            "rect": {
+              "x": 445,
+              "y": 114.5,
+              "width": 40,
+              "height": 22
+            },
+            "font": {
+              "family": "Arial",
+              "pixelSize": 13.3333,
+              "weight": 400,
+              "italic": false
+            }
+          },
+          "native": {
+            "enabled": true,
+            "font": {
+              "family": "DejaVu Sans",
+              "italic": false,
+              "pixelSize": 14,
+              "weight": 400
+            },
+            "rect": {
+              "height": 22,
+              "width": 40,
+              "x": 445,
+              "y": 114
+            },
+            "value": true,
+            "visible": true
+          },
+          "nativeMinusReferenceRect": {
+            "x": 0,
+            "y": -0.5,
+            "width": 0,
+            "height": 0
+          },
+          "nativeMinusReferenceFontSize": 0.6667000000000005
+        },
+        "sourceName": {
+          "reference": {
+            "value": "绘家科技",
+            "visible": true,
+            "enabled": true,
+            "rect": {
+              "x": 39,
+              "y": 229,
+              "width": 359,
+              "height": 34
+            },
+            "font": {
+              "family": "Arial",
+              "pixelSize": 15.2,
+              "weight": 600,
+              "italic": false
+            }
+          },
+          "native": {
+            "enabled": true,
+            "font": {
+              "family": "Nimbus Sans [URW ]",
+              "italic": false,
+              "pixelSize": 15,
+              "weight": 600
+            },
+            "rect": {
+              "height": 34,
+              "width": 359,
+              "x": 39,
+              "y": 229
+            },
+            "value": "绘家科技",
+            "visible": true
+          },
+          "nativeMinusReferenceRect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "nativeMinusReferenceFontSize": -0.1999999999999993
+        },
+        "sourceUrl": {
+          "reference": {
+            "value": "https://example.com/todos",
+            "visible": true,
+            "enabled": true,
+            "rect": {
+              "x": 39,
+              "y": 298,
+              "width": 447,
+              "height": 32
+            },
+            "font": {
+              "family": "Arial",
+              "pixelSize": 14.4,
+              "weight": 400,
+              "italic": false
+            }
+          },
+          "native": {
+            "enabled": true,
+            "font": {
+              "family": "Nimbus Sans [UKWN]",
+              "italic": false,
+              "pixelSize": 14,
+              "weight": 400
+            },
+            "rect": {
+              "height": 32,
+              "width": 447,
+              "x": 39,
+              "y": 298
+            },
+            "value": "https://example.com/todos",
+            "visible": true
+          },
+          "nativeMinusReferenceRect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "nativeMinusReferenceFontSize": -0.40000000000000036
+        },
+        "sourceCount": {
+          "reference": {
+            "value": "1",
+            "visible": true,
+            "enabled": true,
+            "rect": {
+              "x": 75.1875,
+              "y": 184,
+              "width": 25.328125,
+              "height": 16
+            },
+            "font": {
+              "family": "system-ui, -apple-system, sans-serif",
+              "pixelSize": 11.52,
+              "weight": 500,
+              "italic": false
+            }
+          },
+          "native": {
+            "enabled": true,
+            "font": {
+              "family": "DejaVu Sans",
+              "italic": false,
+              "pixelSize": 12,
+              "weight": 500
+            },
+            "rect": {
+              "height": 16,
+              "width": 25,
+              "x": 75,
+              "y": 184
+            },
+            "value": "1",
+            "visible": true
+          },
+          "nativeMinusReferenceRect": {
+            "x": -0.1875,
+            "y": 0,
+            "width": -0.328125,
+            "height": 0
+          },
+          "nativeMinusReferenceFontSize": 0.4800000000000004
+        }
+      }
+    },
+    {
+      "page": "message-list",
+      "width": 560,
+      "height": 720,
+      "meanAbsoluteRgbError0To255": 10.909325396825396,
+      "pixelsWithAnyDifferencePercent": 71.37748015873017,
+      "pixelsWithAnyChannelDifferenceAbove8Percent": 14.330109126984127,
+      "bindings": {
+        "refresh": {
+          "reference": {
+            "value": "刷新",
+            "visible": true,
+            "enabled": true,
+            "rect": {
+              "x": 430.828125,
+              "y": 72,
+              "width": 74.171875,
+              "height": 36
+            },
+            "font": {
+              "family": "Arial",
+              "pixelSize": 14.08,
+              "weight": 700,
+              "italic": false
+            }
+          },
+          "native": {
+            "enabled": true,
+            "font": {
+              "family": "Nimbus Sans [UKWN]",
+              "italic": false,
+              "pixelSize": 14,
+              "weight": 700
+            },
+            "rect": {
+              "height": 36,
+              "width": 74,
+              "x": 446,
+              "y": 72
+            },
+            "value": "刷新",
+            "visible": true
+          },
+          "nativeMinusReferenceRect": {
+            "x": 15.171875,
+            "y": 0,
+            "width": -0.171875,
+            "height": 0
+          },
+          "nativeMinusReferenceFontSize": -0.08000000000000007
+        }
+      }
+    },
+    {
+      "page": "activation",
+      "width": 540,
+      "height": 540,
+      "meanAbsoluteRgbError0To255": 2.7890729309556472,
+      "pixelsWithAnyDifferencePercent": 65.92592592592592,
+      "pixelsWithAnyChannelDifferenceAbove8Percent": 4.122085048010974,
+      "bindings": {
+        "license": {
+          "reference": {
+            "value": "试用中（剩余 7 天）",
+            "visible": true,
+            "enabled": true,
+            "rect": {
+              "x": 44,
+              "y": 117,
+              "width": 111.265625,
+              "height": 17
+            },
+            "font": {
+              "family": "system-ui, -apple-system, sans-serif",
+              "pixelSize": 12,
+              "weight": 400,
+              "italic": false
+            }
+          },
+          "native": {
+            "enabled": true,
+            "font": {
+              "family": "DejaVu Sans",
+              "italic": false,
+              "pixelSize": 12,
+              "weight": 400
+            },
+            "rect": {
+              "height": 17,
+              "width": 112,
+              "x": 44,
+              "y": 117
+            },
+            "value": "试用中（剩余 7 天）",
+            "visible": true
+          },
+          "nativeMinusReferenceRect": {
+            "x": 0,
+            "y": 0,
+            "width": 0.734375,
+            "height": 0
+          },
+          "nativeMinusReferenceFontSize": 0
+        },
+        "machine": {
+          "reference": {
+            "value": "0123456789abcdef",
+            "visible": true,
+            "enabled": true,
+            "rect": {
+              "x": 283.453125,
+              "y": 164,
+              "width": 154.953125,
+              "height": 22
+            },
+            "font": {
+              "family": "monospace",
+              "pixelSize": 13.6,
+              "weight": 400,
+              "italic": false
+            }
+          },
+          "native": {
+            "enabled": true,
+            "font": {
+              "family": "DejaVu Sans Mono",
+              "italic": false,
+              "pixelSize": 14,
+              "weight": 400
+            },
+            "rect": {
+              "height": 22,
+              "width": 155,
+              "x": 283,
+              "y": 164
+            },
+            "value": "0123456789abcdef",
+            "visible": true
+          },
+          "nativeMinusReferenceRect": {
+            "x": -0.453125,
+            "y": 0,
+            "width": 0.046875,
+            "height": 0
+          },
+          "nativeMinusReferenceFontSize": 0.40000000000000036
+        },
+        "serial": {
+          "reference": {
+            "value": "",
+            "visible": true,
+            "enabled": true,
+            "rect": {
+              "x": 44,
+              "y": 245,
+              "width": 452,
+              "height": 80
+            },
+            "font": {
+              "family": "monospace",
+              "pixelSize": 12.8,
+              "weight": 400,
+              "italic": false
+            }
+          },
+          "native": {
+            "enabled": true,
+            "font": {
+              "family": "DejaVu Sans Mono",
+              "italic": false,
+              "pixelSize": 13,
+              "weight": 400
+            },
+            "rect": {
+              "height": 80,
+              "width": 452,
+              "x": 44,
+              "y": 245
+            },
+            "value": "",
+            "visible": true
+          },
+          "nativeMinusReferenceRect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "nativeMinusReferenceFontSize": 0.1999999999999993
+        }
+      }
+    },
+    {
+      "page": "rules",
+      "width": 950,
+      "height": 570,
+      "meanAbsoluteRgbError0To255": 5.310345337026778,
+      "pixelsWithAnyDifferencePercent": 48.50083102493075,
+      "pixelsWithAnyChannelDifferenceAbove8Percent": 8.628808864265928,
+      "bindings": {}
+    }
+  ]
+}

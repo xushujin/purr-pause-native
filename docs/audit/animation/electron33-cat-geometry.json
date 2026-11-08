@@ -1,0 +1,1202 @@
+[
+  {
+    "mode": "walk-center",
+    "aspect": 1.7777777777777777,
+    "progress": 0,
+    "width": 1280,
+    "height": 800,
+    "bounds": [
+      631.119140625,
+      395,
+      17.77734375,
+      10
+    ],
+    "opacity": 0,
+    "videoFit": "contain"
+  },
+  {
+    "mode": "walk-center",
+    "aspect": 1.7777777777777777,
+    "progress": 0.25,
+    "width": 1280,
+    "height": 800,
+    "bounds": [
+      303.2660217285156,
+      210.578125,
+      673.483642578125,
+      378.84375
+    ],
+    "opacity": 1,
+    "videoFit": "contain"
+  },
+  {
+    "mode": "walk-center",
+    "aspect": 1.7777777777777777,
+    "progress": 0.5,
+    "width": 1280,
+    "height": 800,
+    "bounds": [
+      134.9090576171875,
+      115.875,
+      1010.197509765625,
+      568.25
+    ],
+    "opacity": 1,
+    "videoFit": "contain"
+  },
+  {
+    "mode": "walk-center",
+    "aspect": 1.7777777777777777,
+    "progress": 0.75,
+    "width": 1280,
+    "height": 800,
+    "bounds": [
+      72.88275146484375,
+      80.984375,
+      1134.25,
+      638.03125
+    ],
+    "opacity": 1,
+    "videoFit": "contain"
+  },
+  {
+    "mode": "walk-center",
+    "aspect": 1.7777777777777777,
+    "progress": 1,
+    "width": 1280,
+    "height": 800,
+    "bounds": [
+      64.0218505859375,
+      76,
+      1151.971923828125,
+      648
+    ],
+    "opacity": 1,
+    "videoFit": "contain"
+  },
+  {
+    "mode": "walk-center",
+    "aspect": 1,
+    "progress": 0,
+    "width": 1280,
+    "height": 800,
+    "bounds": [
+      635,
+      395,
+      10,
+      10
+    ],
+    "opacity": 0,
+    "videoFit": "contain"
+  },
+  {
+    "mode": "walk-center",
+    "aspect": 1,
+    "progress": 0.25,
+    "width": 1280,
+    "height": 800,
+    "bounds": [
+      441.328125,
+      201.328125,
+      397.34375,
+      397.34375
+    ],
+    "opacity": 1,
+    "videoFit": "contain"
+  },
+  {
+    "mode": "walk-center",
+    "aspect": 1,
+    "progress": 0.5,
+    "width": 1280,
+    "height": 800,
+    "bounds": [
+      341.875,
+      101.875,
+      596.25,
+      596.25
+    ],
+    "opacity": 1,
+    "videoFit": "contain"
+  },
+  {
+    "mode": "walk-center",
+    "aspect": 1,
+    "progress": 0.75,
+    "width": 1280,
+    "height": 800,
+    "bounds": [
+      305.234375,
+      65.234375,
+      669.53125,
+      669.53125
+    ],
+    "opacity": 1,
+    "videoFit": "contain"
+  },
+  {
+    "mode": "walk-center",
+    "aspect": 1,
+    "progress": 1,
+    "width": 1280,
+    "height": 800,
+    "bounds": [
+      300,
+      60,
+      680,
+      680
+    ],
+    "opacity": 1,
+    "videoFit": "contain"
+  },
+  {
+    "mode": "walk-center",
+    "aspect": 0.5,
+    "progress": 0,
+    "width": 1280,
+    "height": 800,
+    "bounds": [
+      637.5,
+      395,
+      5,
+      10
+    ],
+    "opacity": 0,
+    "videoFit": "contain"
+  },
+  {
+    "mode": "walk-center",
+    "aspect": 0.5,
+    "progress": 0.25,
+    "width": 1280,
+    "height": 800,
+    "bounds": [
+      540.6640625,
+      201.328125,
+      198.671875,
+      397.34375
+    ],
+    "opacity": 1,
+    "videoFit": "contain"
+  },
+  {
+    "mode": "walk-center",
+    "aspect": 0.5,
+    "progress": 0.5,
+    "width": 1280,
+    "height": 800,
+    "bounds": [
+      490.9375,
+      101.875,
+      298.125,
+      596.25
+    ],
+    "opacity": 1,
+    "videoFit": "contain"
+  },
+  {
+    "mode": "walk-center",
+    "aspect": 0.5,
+    "progress": 0.75,
+    "width": 1280,
+    "height": 800,
+    "bounds": [
+      472.6171875,
+      65.234375,
+      334.765625,
+      669.53125
+    ],
+    "opacity": 1,
+    "videoFit": "contain"
+  },
+  {
+    "mode": "walk-center",
+    "aspect": 0.5,
+    "progress": 1,
+    "width": 1280,
+    "height": 800,
+    "bounds": [
+      470,
+      60,
+      340,
+      680
+    ],
+    "opacity": 1,
+    "videoFit": "contain"
+  },
+  {
+    "mode": "walk-center",
+    "aspect": 3,
+    "progress": 0,
+    "width": 1280,
+    "height": 800,
+    "bounds": [
+      625,
+      395,
+      30,
+      10
+    ],
+    "opacity": 0,
+    "videoFit": "contain"
+  },
+  {
+    "mode": "walk-center",
+    "aspect": 3,
+    "progress": 0.25,
+    "width": 1280,
+    "height": 800,
+    "bounds": [
+      300.671875,
+      286.890625,
+      678.65625,
+      226.21875
+    ],
+    "opacity": 1,
+    "videoFit": "contain"
+  },
+  {
+    "mode": "walk-center",
+    "aspect": 3,
+    "progress": 0.5,
+    "width": 1280,
+    "height": 800,
+    "bounds": [
+      134.125,
+      231.375,
+      1011.75,
+      337.25
+    ],
+    "opacity": 1,
+    "videoFit": "contain"
+  },
+  {
+    "mode": "walk-center",
+    "aspect": 3,
+    "progress": 0.75,
+    "width": 1280,
+    "height": 800,
+    "bounds": [
+      72.765625,
+      210.921875,
+      1134.46875,
+      378.15625
+    ],
+    "opacity": 1,
+    "videoFit": "contain"
+  },
+  {
+    "mode": "walk-center",
+    "aspect": 3,
+    "progress": 1,
+    "width": 1280,
+    "height": 800,
+    "bounds": [
+      64,
+      208,
+      1152,
+      384
+    ],
+    "opacity": 1,
+    "videoFit": "contain"
+  },
+  {
+    "mode": "walk-zoom",
+    "aspect": 1.7777777777777777,
+    "progress": 0,
+    "width": 1280,
+    "height": 800,
+    "bounds": [
+      1251.1171875,
+      612,
+      142.21875,
+      80
+    ],
+    "opacity": 1,
+    "videoFit": "contain"
+  },
+  {
+    "mode": "walk-zoom",
+    "aspect": 1.7777777777777777,
+    "progress": 0.25,
+    "width": 1280,
+    "height": 800,
+    "bounds": [
+      564.8292236328125,
+      302.125,
+      725.9822998046875,
+      408.375
+    ],
+    "opacity": 1,
+    "videoFit": "contain"
+  },
+  {
+    "mode": "walk-zoom",
+    "aspect": 1.7777777777777777,
+    "progress": 0.5,
+    "width": 1280,
+    "height": 800,
+    "bounds": [
+      212.4127197265625,
+      143,
+      1025.752685546875,
+      577
+    ],
+    "opacity": 1,
+    "videoFit": "contain"
+  },
+  {
+    "mode": "walk-zoom",
+    "aspect": 1.7777777777777777,
+    "progress": 0.75,
+    "width": 1280,
+    "height": 800,
+    "bounds": [
+      82.56683349609375,
+      84.375,
+      1136.1943359375,
+      639.125
+    ],
+    "opacity": 1,
+    "videoFit": "contain"
+  },
+  {
+    "mode": "walk-zoom",
+    "aspect": 1.7777777777777777,
+    "progress": 1,
+    "width": 1280,
+    "height": 800,
+    "bounds": [
+      64.0218505859375,
+      76,
+      1151.971923828125,
+      648
+    ],
+    "opacity": 1,
+    "videoFit": "contain"
+  },
+  {
+    "mode": "walk-zoom",
+    "aspect": 1,
+    "progress": 0,
+    "width": 1280,
+    "height": 800,
+    "bounds": [
+      1360,
+      612,
+      80,
+      80
+    ],
+    "opacity": 1,
+    "videoFit": "contain"
+  },
+  {
+    "mode": "walk-zoom",
+    "aspect": 1,
+    "progress": 0.25,
+    "width": 1280,
+    "height": 800,
+    "bounds": [
+      747.1875,
+      292.875,
+      426.875,
+      426.875
+    ],
+    "opacity": 1,
+    "videoFit": "contain"
+  },
+  {
+    "mode": "walk-zoom",
+    "aspect": 1,
+    "progress": 0.5,
+    "width": 1280,
+    "height": 800,
+    "bounds": [
+      432.5,
+      129,
+      605,
+      605
+    ],
+    "opacity": 1,
+    "videoFit": "contain"
+  },
+  {
+    "mode": "walk-zoom",
+    "aspect": 1,
+    "progress": 0.75,
+    "width": 1280,
+    "height": 800,
+    "bounds": [
+      316.5625,
+      68.625,
+      670.625,
+      670.625
+    ],
+    "opacity": 1,
+    "videoFit": "contain"
+  },
+  {
+    "mode": "walk-zoom",
+    "aspect": 1,
+    "progress": 1,
+    "width": 1280,
+    "height": 800,
+    "bounds": [
+      300,
+      60,
+      680,
+      680
+    ],
+    "opacity": 1,
+    "videoFit": "contain"
+  },
+  {
+    "mode": "walk-zoom",
+    "aspect": 0.5,
+    "progress": 0,
+    "width": 1280,
+    "height": 800,
+    "bounds": [
+      1430,
+      612,
+      40,
+      80
+    ],
+    "opacity": 1,
+    "videoFit": "contain"
+  },
+  {
+    "mode": "walk-zoom",
+    "aspect": 0.5,
+    "progress": 0.25,
+    "width": 1280,
+    "height": 800,
+    "bounds": [
+      875,
+      292.875,
+      213.4375,
+      426.875
+    ],
+    "opacity": 1,
+    "videoFit": "contain"
+  },
+  {
+    "mode": "walk-zoom",
+    "aspect": 0.5,
+    "progress": 0.5,
+    "width": 1280,
+    "height": 800,
+    "bounds": [
+      590,
+      129,
+      302.5,
+      605
+    ],
+    "opacity": 1,
+    "videoFit": "contain"
+  },
+  {
+    "mode": "walk-zoom",
+    "aspect": 0.5,
+    "progress": 0.75,
+    "width": 1280,
+    "height": 800,
+    "bounds": [
+      485,
+      68.625,
+      335.3125,
+      670.625
+    ],
+    "opacity": 1,
+    "videoFit": "contain"
+  },
+  {
+    "mode": "walk-zoom",
+    "aspect": 0.5,
+    "progress": 1,
+    "width": 1280,
+    "height": 800,
+    "bounds": [
+      470,
+      60,
+      340,
+      680
+    ],
+    "opacity": 1,
+    "videoFit": "contain"
+  },
+  {
+    "mode": "walk-zoom",
+    "aspect": 3,
+    "progress": 0,
+    "width": 1280,
+    "height": 800,
+    "bounds": [
+      1080,
+      612,
+      240,
+      80
+    ],
+    "opacity": 1,
+    "videoFit": "contain"
+  },
+  {
+    "mode": "walk-zoom",
+    "aspect": 3,
+    "progress": 0.25,
+    "width": 1280,
+    "height": 800,
+    "bounds": [
+      492.6250305175781,
+      378.4375,
+      767.25,
+      255.75
+    ],
+    "opacity": 1,
+    "videoFit": "contain"
+  },
+  {
+    "mode": "walk-zoom",
+    "aspect": 3,
+    "progress": 0.5,
+    "width": 1280,
+    "height": 800,
+    "bounds": [
+      191,
+      258.5,
+      1038,
+      346
+    ],
+    "opacity": 1,
+    "videoFit": "contain"
+  },
+  {
+    "mode": "walk-zoom",
+    "aspect": 3,
+    "progress": 0.75,
+    "width": 1280,
+    "height": 800,
+    "bounds": [
+      79.875,
+      214.3125,
+      1137.75,
+      379.25
+    ],
+    "opacity": 1,
+    "videoFit": "contain"
+  },
+  {
+    "mode": "walk-zoom",
+    "aspect": 3,
+    "progress": 1,
+    "width": 1280,
+    "height": 800,
+    "bounds": [
+      64,
+      208,
+      1152,
+      384
+    ],
+    "opacity": 1,
+    "videoFit": "contain"
+  },
+  {
+    "mode": "walk-flat",
+    "aspect": 1.7777777777777777,
+    "progress": 0,
+    "width": 1280,
+    "height": 800,
+    "bounds": [
+      746.2406005859375,
+      76,
+      1151.971923828125,
+      648
+    ],
+    "opacity": 1,
+    "videoFit": "contain"
+  },
+  {
+    "mode": "walk-flat",
+    "aspect": 1.7777777777777777,
+    "progress": 0.25,
+    "width": 1280,
+    "height": 800,
+    "bounds": [
+      351.8343505859375,
+      76,
+      1151.971923828125,
+      648
+    ],
+    "opacity": 1,
+    "videoFit": "contain"
+  },
+  {
+    "mode": "walk-flat",
+    "aspect": 1.7777777777777777,
+    "progress": 0.5,
+    "width": 1280,
+    "height": 800,
+    "bounds": [
+      149.3031005859375,
+      76,
+      1151.971923828125,
+      648
+    ],
+    "opacity": 1,
+    "videoFit": "contain"
+  },
+  {
+    "mode": "walk-flat",
+    "aspect": 1.7777777777777777,
+    "progress": 0.75,
+    "width": 1280,
+    "height": 800,
+    "bounds": [
+      74.6781005859375,
+      76,
+      1151.971923828125,
+      648
+    ],
+    "opacity": 1,
+    "videoFit": "contain"
+  },
+  {
+    "mode": "walk-flat",
+    "aspect": 1.7777777777777777,
+    "progress": 1,
+    "width": 1280,
+    "height": 800,
+    "bounds": [
+      64.0218505859375,
+      76,
+      1151.971923828125,
+      648
+    ],
+    "opacity": 1,
+    "videoFit": "contain"
+  },
+  {
+    "mode": "walk-flat",
+    "aspect": 1,
+    "progress": 0,
+    "width": 1280,
+    "height": 800,
+    "bounds": [
+      1060,
+      60,
+      680,
+      680
+    ],
+    "opacity": 1,
+    "videoFit": "contain"
+  },
+  {
+    "mode": "walk-flat",
+    "aspect": 1,
+    "progress": 0.25,
+    "width": 1280,
+    "height": 800,
+    "bounds": [
+      620.625,
+      60,
+      680,
+      680
+    ],
+    "opacity": 1,
+    "videoFit": "contain"
+  },
+  {
+    "mode": "walk-flat",
+    "aspect": 1,
+    "progress": 0.5,
+    "width": 1280,
+    "height": 800,
+    "bounds": [
+      395,
+      60,
+      680,
+      680
+    ],
+    "opacity": 1,
+    "videoFit": "contain"
+  },
+  {
+    "mode": "walk-flat",
+    "aspect": 1,
+    "progress": 0.75,
+    "width": 1280,
+    "height": 800,
+    "bounds": [
+      311.875,
+      60,
+      680,
+      680
+    ],
+    "opacity": 1,
+    "videoFit": "contain"
+  },
+  {
+    "mode": "walk-flat",
+    "aspect": 1,
+    "progress": 1,
+    "width": 1280,
+    "height": 800,
+    "bounds": [
+      300,
+      60,
+      680,
+      680
+    ],
+    "opacity": 1,
+    "videoFit": "contain"
+  },
+  {
+    "mode": "walk-flat",
+    "aspect": 0.5,
+    "progress": 0,
+    "width": 1280,
+    "height": 800,
+    "bounds": [
+      1280,
+      60,
+      340,
+      680
+    ],
+    "opacity": 1,
+    "videoFit": "contain"
+  },
+  {
+    "mode": "walk-flat",
+    "aspect": 0.5,
+    "progress": 0.25,
+    "width": 1280,
+    "height": 800,
+    "bounds": [
+      811.71875,
+      60,
+      340,
+      680
+    ],
+    "opacity": 1,
+    "videoFit": "contain"
+  },
+  {
+    "mode": "walk-flat",
+    "aspect": 0.5,
+    "progress": 0.5,
+    "width": 1280,
+    "height": 800,
+    "bounds": [
+      571.25,
+      60,
+      340,
+      680
+    ],
+    "opacity": 1,
+    "videoFit": "contain"
+  },
+  {
+    "mode": "walk-flat",
+    "aspect": 0.5,
+    "progress": 0.75,
+    "width": 1280,
+    "height": 800,
+    "bounds": [
+      482.65625,
+      60,
+      340,
+      680
+    ],
+    "opacity": 1,
+    "videoFit": "contain"
+  },
+  {
+    "mode": "walk-flat",
+    "aspect": 0.5,
+    "progress": 1,
+    "width": 1280,
+    "height": 800,
+    "bounds": [
+      470,
+      60,
+      340,
+      680
+    ],
+    "opacity": 1,
+    "videoFit": "contain"
+  },
+  {
+    "mode": "walk-flat",
+    "aspect": 3,
+    "progress": 0,
+    "width": 1280,
+    "height": 800,
+    "bounds": [
+      624,
+      208,
+      1152,
+      384
+    ],
+    "opacity": 1,
+    "videoFit": "contain"
+  },
+  {
+    "mode": "walk-flat",
+    "aspect": 3,
+    "progress": 0.25,
+    "width": 1280,
+    "height": 800,
+    "bounds": [
+      300.25,
+      208,
+      1152,
+      384
+    ],
+    "opacity": 1,
+    "videoFit": "contain"
+  },
+  {
+    "mode": "walk-flat",
+    "aspect": 3,
+    "progress": 0.5,
+    "width": 1280,
+    "height": 800,
+    "bounds": [
+      134,
+      208,
+      1152,
+      384
+    ],
+    "opacity": 1,
+    "videoFit": "contain"
+  },
+  {
+    "mode": "walk-flat",
+    "aspect": 3,
+    "progress": 0.75,
+    "width": 1280,
+    "height": 800,
+    "bounds": [
+      72.75,
+      208,
+      1152,
+      384
+    ],
+    "opacity": 1,
+    "videoFit": "contain"
+  },
+  {
+    "mode": "walk-flat",
+    "aspect": 3,
+    "progress": 1,
+    "width": 1280,
+    "height": 800,
+    "bounds": [
+      64,
+      208,
+      1152,
+      384
+    ],
+    "opacity": 1,
+    "videoFit": "contain"
+  },
+  {
+    "mode": "fade-center",
+    "aspect": 1.7777777777777777,
+    "progress": 0,
+    "width": 1280,
+    "height": 800,
+    "bounds": [
+      611.2000122070312,
+      383.79998779296875,
+      57.5999755859375,
+      32.399993896484375
+    ],
+    "opacity": 0,
+    "videoFit": "contain"
+  },
+  {
+    "mode": "fade-center",
+    "aspect": 1.7777777777777777,
+    "progress": 0.25,
+    "width": 1280,
+    "height": 800,
+    "bounds": [
+      294.8500061035156,
+      205.85313415527344,
+      690.300048828125,
+      388.293701171875
+    ],
+    "opacity": 1,
+    "videoFit": "contain"
+  },
+  {
+    "mode": "fade-center",
+    "aspect": 1.7777777777777777,
+    "progress": 0.5,
+    "width": 1280,
+    "height": 800,
+    "bounds": [
+      132.39999389648438,
+      114.47500610351562,
+      1015.199951171875,
+      571.050048828125
+    ],
+    "opacity": 1,
+    "videoFit": "contain"
+  },
+  {
+    "mode": "fade-center",
+    "aspect": 1.7777777777777777,
+    "progress": 0.75,
+    "width": 1280,
+    "height": 800,
+    "bounds": [
+      72.54998779296875,
+      80.80938720703125,
+      1134.89990234375,
+      638.3812255859375
+    ],
+    "opacity": 1,
+    "videoFit": "contain"
+  },
+  {
+    "mode": "fade-center",
+    "aspect": 1.7777777777777777,
+    "progress": 1,
+    "width": 1280,
+    "height": 800,
+    "bounds": [
+      64,
+      76,
+      1152,
+      648
+    ],
+    "opacity": 1,
+    "videoFit": "contain"
+  },
+  {
+    "mode": "fade-center",
+    "aspect": 1,
+    "progress": 0,
+    "width": 1280,
+    "height": 800,
+    "bounds": [
+      623,
+      383,
+      34,
+      34
+    ],
+    "opacity": 0,
+    "videoFit": "contain"
+  },
+  {
+    "mode": "fade-center",
+    "aspect": 1,
+    "progress": 0.25,
+    "width": 1280,
+    "height": 800,
+    "bounds": [
+      436.265625,
+      196.26564025878906,
+      407.46875,
+      407.46875
+    ],
+    "opacity": 1,
+    "videoFit": "contain"
+  },
+  {
+    "mode": "fade-center",
+    "aspect": 1,
+    "progress": 0.5,
+    "width": 1280,
+    "height": 800,
+    "bounds": [
+      340.375,
+      100.375,
+      599.25,
+      599.25
+    ],
+    "opacity": 1,
+    "videoFit": "contain"
+  },
+  {
+    "mode": "fade-center",
+    "aspect": 1,
+    "progress": 0.75,
+    "width": 1280,
+    "height": 800,
+    "bounds": [
+      305.046875,
+      65.046875,
+      669.90625,
+      669.90625
+    ],
+    "opacity": 1,
+    "videoFit": "contain"
+  },
+  {
+    "mode": "fade-center",
+    "aspect": 1,
+    "progress": 1,
+    "width": 1280,
+    "height": 800,
+    "bounds": [
+      300,
+      60,
+      680,
+      680
+    ],
+    "opacity": 1,
+    "videoFit": "contain"
+  },
+  {
+    "mode": "fade-center",
+    "aspect": 0.5,
+    "progress": 0,
+    "width": 1280,
+    "height": 800,
+    "bounds": [
+      631.5,
+      383,
+      17,
+      34
+    ],
+    "opacity": 0,
+    "videoFit": "contain"
+  },
+  {
+    "mode": "fade-center",
+    "aspect": 0.5,
+    "progress": 0.25,
+    "width": 1280,
+    "height": 800,
+    "bounds": [
+      538.1328125,
+      196.26564025878906,
+      203.734375,
+      407.46875
+    ],
+    "opacity": 1,
+    "videoFit": "contain"
+  },
+  {
+    "mode": "fade-center",
+    "aspect": 0.5,
+    "progress": 0.5,
+    "width": 1280,
+    "height": 800,
+    "bounds": [
+      490.1875,
+      100.375,
+      299.625,
+      599.25
+    ],
+    "opacity": 1,
+    "videoFit": "contain"
+  },
+  {
+    "mode": "fade-center",
+    "aspect": 0.5,
+    "progress": 0.75,
+    "width": 1280,
+    "height": 800,
+    "bounds": [
+      472.5234375,
+      65.046875,
+      334.953125,
+      669.90625
+    ],
+    "opacity": 1,
+    "videoFit": "contain"
+  },
+  {
+    "mode": "fade-center",
+    "aspect": 0.5,
+    "progress": 1,
+    "width": 1280,
+    "height": 800,
+    "bounds": [
+      470,
+      60,
+      340,
+      680
+    ],
+    "opacity": 1,
+    "videoFit": "contain"
+  },
+  {
+    "mode": "fade-center",
+    "aspect": 3,
+    "progress": 0,
+    "width": 1280,
+    "height": 800,
+    "bounds": [
+      611.2000122070312,
+      390.3999938964844,
+      57.5999755859375,
+      19.20001220703125
+    ],
+    "opacity": 0,
+    "videoFit": "contain"
+  },
+  {
+    "mode": "fade-center",
+    "aspect": 3,
+    "progress": 0.25,
+    "width": 1280,
+    "height": 800,
+    "bounds": [
+      294.8500061035156,
+      284.95001220703125,
+      690.300048828125,
+      230.0999755859375
+    ],
+    "opacity": 1,
+    "videoFit": "contain"
+  },
+  {
+    "mode": "fade-center",
+    "aspect": 3,
+    "progress": 0.5,
+    "width": 1280,
+    "height": 800,
+    "bounds": [
+      132.39999389648438,
+      230.79998779296875,
+      1015.199951171875,
+      338.4000244140625
+    ],
+    "opacity": 1,
+    "videoFit": "contain"
+  },
+  {
+    "mode": "fade-center",
+    "aspect": 3,
+    "progress": 0.75,
+    "width": 1280,
+    "height": 800,
+    "bounds": [
+      72.54998779296875,
+      210.85000610351562,
+      1134.89990234375,
+      378.3000183105469
+    ],
+    "opacity": 1,
+    "videoFit": "contain"
+  },
+  {
+    "mode": "fade-center",
+    "aspect": 3,
+    "progress": 1,
+    "width": 1280,
+    "height": 800,
+    "bounds": [
+      64,
+      208,
+      1152,
+      384
+    ],
+    "opacity": 1,
+    "videoFit": "contain"
+  }
+]

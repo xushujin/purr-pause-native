@@ -1,0 +1,153 @@
+{
+  "date": "2026-11-08",
+  "compiler": "Ubuntu clang 21.1.8 cross target",
+  "sdk": "MacOSX13.3.sdk",
+  "qt": "official Qt 6.5.3 macOS universal headers",
+  "level": "Mac target object compilation and platform-module linking; not complete application linking, DMG creation, or macOS runtime validation",
+  "objects": [
+    {
+      "architecture": "x86_64",
+      "objectCpuType": "0x1000007",
+      "objectSha256": "3985dac6cc7128064e7e3c730ad401ec62a361d908fcd6a596fbf9a50b922914",
+      "deployment": [
+        {
+          "platform": 1,
+          "minos": "12.0.0",
+          "sdk": "13.3.0"
+        }
+      ],
+      "source": "src/platform_mac.mm",
+      "sourceSha256": "d9159966bcac42d97f057c51b9bc3e38dcc3579d13a5b39b1e242998bef7d7fc"
+    },
+    {
+      "architecture": "arm64",
+      "objectCpuType": "0x100000c",
+      "objectSha256": "e6dc1c10f10d28cf905aa1566aa33e861262c75f4e5911451191ac6f1b5a4c42",
+      "deployment": [
+        {
+          "platform": 1,
+          "minos": "12.0.0",
+          "sdk": "13.3.0"
+        }
+      ],
+      "source": "src/platform_mac.mm",
+      "sourceSha256": "d9159966bcac42d97f057c51b9bc3e38dcc3579d13a5b39b1e242998bef7d7fc"
+    }
+  ],
+  "sdkArchiveSha256": "518e35eae6039b3f64e8025f4525c1c43786cc5cf39459d609852faf091e34be",
+  "qtbaseArchiveSha256": "d861a82acfc2015e7fb48c20087a1066e7af31932dd99ba272169b3ae4c8b386",
+  "qtArchiveOrigin": "download.qt.io/online/qtsdkrepository/mac_x64/desktop/qt6_653/qt.qt6.653.clang_64",
+  "sdkOrigin": "joseluisq/macosx-sdks MacOSX13.3 SDK archive",
+  "cocoaTestSyntax": {
+    "source": "tests/test_macos_platform.mm",
+    "sourceSha256": "20abd3fd717a93d1e44db56e5b355b6a5145c864a851f1acd2beb3a4279af36d",
+    "targets": [
+      "x86_64-apple-macos12",
+      "arm64-apple-macos12"
+    ],
+    "result": "passed; generated MOC include excluded from temporary syntax-check copy; no runtime claim"
+  },
+  "platformModuleLink": {
+    "result": "both Intel and ARM64 platform integration dylibs linked against actual Mac Qt6.5.3 and SDK13.3 stubs; no undefined symbols ignored",
+    "linker": "LLVM ld64.lld21",
+    "runtimeSupport": "LLVM21.1.8 compiler-rt/os_version_check.c for @available",
+    "runtimeSupportSha256": "37accdfb259f9228c1e5049e8bc3dcc2c996fa17c7fda542eed977237af71a9e",
+    "outputs": [
+      {
+        "architecture": "x86_64",
+        "sha256": "c33ef31d7ae96af1a7d2b233e0bb006fe65463724b3351b42ac0c480c4220213"
+      },
+      {
+        "architecture": "arm64",
+        "sha256": "ce0833d50db8ce51b1ba1b25475075c4be20af3ad5fbe3fca4bc3d62f0165206"
+      }
+    ],
+    "limitation": "This is only the platform integration module, not the complete app, a DMG, or macOS execution."
+  },
+  "nativeTranslationUnits": [
+    {
+      "source": "src/main.cpp",
+      "sourceSha256": "f6a01fff3d015358639a049cdbf52d9df73504426a64b7c9b048097ba9910a7c",
+      "architecture": "x86_64",
+      "exitCode": 0,
+      "objectSha256": "f4b4d2abfc1dc791c09cfff8d01048991ce0092432bf473d0e77b6b5c07f0e44"
+    },
+    {
+      "source": "src/application.cpp",
+      "sourceSha256": "cba2eba44fc4372729d38aadb8f1f034203167375c28b7b3708bec66628ed175",
+      "architecture": "x86_64",
+      "exitCode": 0,
+      "objectSha256": "3694afe0cdac05008d1555c4142fc45a5c95f6378cd05133a1cb56b4e47b2f34"
+    },
+    {
+      "source": "src/dialogs.cpp",
+      "sourceSha256": "388c314d6fc2e77770f77fa4918ab97d84be8695f08f6b5e6f0e755daae7f0b1",
+      "architecture": "x86_64",
+      "exitCode": 0,
+      "objectSha256": "f61d2be0f6ff6a117e5afba66dfb9730182153d67f51806cbe138860668563b4"
+    },
+    {
+      "source": "src/overlays.cpp",
+      "sourceSha256": "39b5e81680649e05488d31d15e14088dbcbabf7d67422251bb212c7b03750a76",
+      "architecture": "x86_64",
+      "exitCode": 0,
+      "objectSha256": "3196eba89b17ec558b1a7b75e34d7dcb81c06ecffafd8b7af12bb6f36babd117"
+    },
+    {
+      "source": "src/messages.cpp",
+      "sourceSha256": "39d62f6fbd97394c34aa8c5aeb5f2b0bdb264058433b5e4d7b5612aad11d6d4f",
+      "architecture": "x86_64",
+      "exitCode": 0,
+      "objectSha256": "99a99f23366adb845f2a07eb0c3b76a936242caf214b82d803279b55ade59dc7"
+    },
+    {
+      "source": "src/installation.cpp",
+      "sourceSha256": "a2e40b9326f502aeff5fb141288c099f6cdbf357da0a5f8a5b175cb34a36d633",
+      "architecture": "x86_64",
+      "exitCode": 0,
+      "objectSha256": "0124679b5141da29c4cc0d0c92a43d834acb576eb226c8c8ec2ffe77465103e1"
+    },
+    {
+      "source": "src/main.cpp",
+      "sourceSha256": "f6a01fff3d015358639a049cdbf52d9df73504426a64b7c9b048097ba9910a7c",
+      "architecture": "arm64",
+      "exitCode": 0,
+      "objectSha256": "aba5d44079bf0069df8546d3e844777dd0d0a3b35f620eeb90f589a1b36ec017"
+    },
+    {
+      "source": "src/application.cpp",
+      "sourceSha256": "cba2eba44fc4372729d38aadb8f1f034203167375c28b7b3708bec66628ed175",
+      "architecture": "arm64",
+      "exitCode": 0,
+      "objectSha256": "4b8bbcab2bfbbbfd2c7a7795f0a084d1a2620388498ce5ac691d0968bfb81069"
+    },
+    {
+      "source": "src/dialogs.cpp",
+      "sourceSha256": "388c314d6fc2e77770f77fa4918ab97d84be8695f08f6b5e6f0e755daae7f0b1",
+      "architecture": "arm64",
+      "exitCode": 0,
+      "objectSha256": "aa0ca6d11173bb5b995b5383ceba359c8cdf3f7a181aa0f3660003abde699b17"
+    },
+    {
+      "source": "src/overlays.cpp",
+      "sourceSha256": "39b5e81680649e05488d31d15e14088dbcbabf7d67422251bb212c7b03750a76",
+      "architecture": "arm64",
+      "exitCode": 0,
+      "objectSha256": "4787eb6e6b25460681d91d5e837f5652b84f3c086158526564c8decc28a21cf1"
+    },
+    {
+      "source": "src/messages.cpp",
+      "sourceSha256": "39d62f6fbd97394c34aa8c5aeb5f2b0bdb264058433b5e4d7b5612aad11d6d4f",
+      "architecture": "arm64",
+      "exitCode": 0,
+      "objectSha256": "460bf41225c7acf863b462ab0789e46dc1fb2b230b755a141f5baa350236a211"
+    },
+    {
+      "source": "src/installation.cpp",
+      "sourceSha256": "a2e40b9326f502aeff5fb141288c099f6cdbf357da0a5f8a5b175cb34a36d633",
+      "architecture": "arm64",
+      "exitCode": 0,
+      "objectSha256": "29e8ed24ba90cfb2b40c65771d70e17c689d224829de41373fcb2a437ff06e15"
+    }
+  ]
+}

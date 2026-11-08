@@ -1,0 +1,8 @@
+/build*/
+/dist/
+/.deps/
+/.qt/
+*.user
+.DS_Store
+__pycache__/
+/.cache/

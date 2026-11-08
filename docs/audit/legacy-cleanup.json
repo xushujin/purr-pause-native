@@ -1,0 +1,132 @@
+{
+  "schemaVersion": 1,
+  "verifiedAt": "2026-11-08T09:09:27.037682+00:00",
+  "removedDirectory": "purr-pause/",
+  "temporaryBackupDeleted": true,
+  "originalFileCount": 55,
+  "originalBytes": 15487250,
+  "referenceManifest": "tests/reference/manifest.json",
+  "referenceManifestSha256": "daf9ff3f190dc055295e36fa5fa40022ef63702e81fb4813f512bb943b0878d3",
+  "referenceSourceFiles": 12,
+  "referenceSourceBytes": 136058,
+  "originalBytesComparedBeforeDeletion": true,
+  "validationWithLegacyDirectoryAbsent": {
+    "cmakeConfigureAndBuild": "passed",
+    "ctest": {
+      "passed": 12,
+      "failed": 0,
+      "qtSkipped": 0,
+      "qtTotals": [
+        {
+          "passed": 18,
+          "failed": 0,
+          "skipped": 0,
+          "blacklisted": 0
+        },
+        {
+          "passed": 15,
+          "failed": 0,
+          "skipped": 0,
+          "blacklisted": 0
+        },
+        {
+          "passed": 9,
+          "failed": 0,
+          "skipped": 0,
+          "blacklisted": 0
+        },
+        {
+          "passed": 13,
+          "failed": 0,
+          "skipped": 0,
+          "blacklisted": 0
+        },
+        {
+          "passed": 3,
+          "failed": 0,
+          "skipped": 0,
+          "blacklisted": 0
+        },
+        {
+          "passed": 10,
+          "failed": 0,
+          "skipped": 0,
+          "blacklisted": 0
+        },
+        {
+          "passed": 5,
+          "failed": 0,
+          "skipped": 0,
+          "blacklisted": 0
+        },
+        {
+          "passed": 3,
+          "failed": 0,
+          "skipped": 0,
+          "blacklisted": 0
+        },
+        {
+          "passed": 7,
+          "failed": 0,
+          "skipped": 0,
+          "blacklisted": 0
+        },
+        {
+          "passed": 3,
+          "failed": 0,
+          "skipped": 0,
+          "blacklisted": 0
+        }
+      ]
+    },
+    "visual": {
+      "electronVersion": "33.2.1",
+      "pages": 5,
+      "captureValidation": "passed",
+      "pixelIdentity": false,
+      "reportSha256": "257db7a4733a128cbefdc80c084033dd527b63e434cf17a125fdfdb4306ccc4a"
+    },
+    "visualToolTests": {
+      "passed": 6,
+      "failed": 0
+    },
+    "animation": {
+      "catSamples": 80,
+      "rocketSamples": 8,
+      "referenceJsonByteIdentical": true
+    },
+    "actionlint": "passed",
+    "installedProbe": {
+      "architecture": "x86_64",
+      "assets": "/tmp/purr-cleanup-install/usr/share/purr-pause/assets",
+      "docs": "/tmp/purr-cleanup-install/usr/share/purr-pause/docs",
+      "executable": "/tmp/purr-cleanup-install/usr/bin/purr-pause",
+      "ok": true,
+      "platform": "offscreen",
+      "qtVersion": "6.10.2",
+      "tlsBackend": "openssl",
+      "tlsLibrary": "OpenSSL 3.5.5 27 Jan 2026",
+      "version": "1.5.0",
+      "videos": [
+        {
+          "file": "cat-walk.webm",
+          "height": 1080,
+          "opaque": true,
+          "transparent": true,
+          "width": 1920
+        },
+        {
+          "file": "cat-rest.webm",
+          "height": 1080,
+          "opaque": true,
+          "transparent": true,
+          "width": 1920
+        }
+      ]
+    },
+    "referenceFilesInstalled": false
+  },
+  "productSourcesAndAssetsUnchanged": true,
+  "existingReleaseArtifactHashesUnchanged": true,
+  "scope": "Local Linux validation of legacy-project removal and test-reference relocation; does not establish macOS runtime, remote release, or pixel parity."
+}

@@ -1,0 +1,350 @@
+name: Native build and release
+
+on:
+  pull_request:
+  push:
+    branches: [main, master]
+    tags: ['v*']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: native-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ !startsWith(github.ref, 'refs/tags/') }}
+
+jobs:
+  packaging-checks:
+    name: Packaging dependency graph checks
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check deployment graph and shell scripts
+        run: |
+          python3 -m unittest discover -s tests -p test_macos_packaging.py -v
+          for script in scripts/*.sh packaging/AppRun; do bash -n "$script"; done
+
+  linux:
+    name: Linux / ${{ matrix.arch }} / Ubuntu 22.04
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - arch: amd64
+            runner: ubuntu-22.04
+          - arch: arm64
+            runner: ubuntu-22.04-arm
+    runs-on: ${{ matrix.runner }}
+    env:
+      PURR_CODEC_PREFIX: ${{ github.workspace }}/.deps/linux-${{ matrix.arch }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install build dependencies on the minimum supported distribution
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y cmake ninja-build pkg-config g++ qt6-base-dev qt6-base-dev-tools \
+            libqt6svg6-dev qt6-qpa-plugins libssl-dev libx11-dev libxss-dev libgl1-mesa-dev \
+            dpkg-dev xvfb dbus-x11 desktop-file-utils patchelf nasm curl python3 \
+            squashfs-tools fonts-noto-cjk fonts-dejavu-core fonts-droid-fallback fontconfig ca-certificates \
+            openbox libglib2.0-bin libxtst-dev python3-pil libnss3 libnspr4 libatk-bridge2.0-0 libasound2
+      - name: Cache portable video codecs
+        id: codecs
+        uses: actions/cache@v4
+        with:
+          path: .deps/linux-${{ matrix.arch }}
+          key: native-jammy-codecs-${{ matrix.arch }}-${{ hashFiles('scripts/build-linux-codecs.sh') }}
+      - name: Build video codecs with the Ubuntu 22.04 baseline
+        if: steps.codecs.outputs.cache-hit != 'true'
+        run: scripts/build-linux-codecs.sh "$PURR_CODEC_PREFIX"
+      - name: Configure and build
+        run: |
+          export PKG_CONFIG_PATH="$PURR_CODEC_PREFIX/lib/pkgconfig${PKG_CONFIG_PATH:+:$PKG_CONFIG_PATH}"
+          cmake -S . -B build -G Ninja -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr -DBUILD_TESTING=ON \
+            -DPURR_CODEC_PREFIX="$PURR_CODEC_PREFIX" -DPURR_DESKTOP_TESTS=ON
+          cmake --build build --parallel 4
+      - name: Test
+        run: |
+          dbus-run-session -- xvfb-run -a ctest --test-dir build --output-on-failure
+          dbus-run-session -- xvfb-run -a build/purr-pause --smoke-test --data-dir "$RUNNER_TEMP/purr-pause-smoke-build"
+      - name: Capture native and original Electron interfaces
+        if: matrix.arch == 'amd64'
+        env:
+          TZ: Asia/Shanghai
+        run: |
+          npm install --prefix "$RUNNER_TEMP/purr-visual-electron" --no-audit --no-fund --save-exact electron@33.2.1
+          QT_QPA_PLATFORM=offscreen QT_SCALE_FACTOR=1 build/test_visual \
+            --config tests/visual/fixture.json --output build/visual
+          xvfb-run -a "$RUNNER_TEMP/purr-visual-electron/node_modules/.bin/electron" --no-sandbox \
+            scripts/capture-visual-reference.cjs --config tests/visual/fixture.json --output build/visual
+          python3 -m unittest discover -s tests/visual -p 'test_*.py'
+          python3 scripts/compare-visual.py --config tests/visual/fixture.json \
+            --captures build/visual --output build/visual/report
+      - name: Check release version
+        if: startsWith(github.ref, 'refs/tags/')
+        env:
+          TAG: ${{ github.ref_name }}
+        run: test "$TAG" = "v$(sed -n 's/^CMAKE_PROJECT_VERSION:STATIC=//p' build/CMakeCache.txt)"
+      - name: Package and verify install
+        run: |
+          mkdir -p dist/verification
+          desktop-file-validate packaging/purr-pause.desktop
+          scripts/package-linux.sh build dist
+          sudo apt-get install -y ./dist/*.deb
+          test -x /usr/bin/purr-pause
+          test -f /usr/share/purr-pause/assets/webm/cat-walk.webm
+          ldd /usr/bin/purr-pause
+          if ldd /usr/bin/purr-pause | grep -q 'not found'; then exit 1; fi
+          dbus-run-session -- xvfb-run -a /usr/bin/purr-pause --smoke-test --data-dir "$RUNNER_TEMP/purr-pause-smoke-installed"
+          dbus-run-session -- xvfb-run -a /usr/bin/purr-pause --verify-install \
+            --verification-report "$PWD/dist/verification/deb-installed.json" \
+            --data-dir "$RUNNER_TEMP/purr-pause-verify-installed"
+      - name: Package and verify standalone AppImage
+        run: |
+          scripts/package-appimage.sh build dist
+          dbus-run-session -- xvfb-run -a dist/*.AppImage --appimage-extract-and-run \
+            --smoke-test --data-dir "$RUNNER_TEMP/purr-pause-smoke-appimage"
+          dbus-run-session -- xvfb-run -a dist/*.AppImage --appimage-extract-and-run --verify-install \
+            --verification-report "$PWD/dist/verification/appimage-installed.json" \
+            --data-dir "$RUNNER_TEMP/purr-pause-verify-appimage"
+      - name: Verify AppImage in a clean Ubuntu 22.04 without Qt
+        run: |
+          docker run --rm --volume "$PWD/dist:/artifacts:ro" --volume "$PWD/dist/verification:/evidence" ubuntu:22.04 /bin/bash -euc '
+            apt-get update -qq
+            DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends xvfb xauth dbus-x11
+            test -z "$(find /usr/lib -name "libQt6Core.so*" -print -quit)"
+            dbus-run-session -- xvfb-run -a /artifacts/*.AppImage --appimage-extract-and-run \
+              --verify-install --verification-report /evidence/appimage-clean-ubuntu22.json \
+              --data-dir /tmp/purr-pause-minimal
+          '
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: native-evidence-linux-${{ matrix.arch }}
+          path: |
+            dist/verification/
+            build/Testing/Temporary/
+            build/visual/
+          if-no-files-found: warn
+      - uses: actions/upload-artifact@v4
+        with:
+          name: purr-pause-linux-${{ matrix.arch }}
+          path: |
+            dist/*.deb
+            dist/*.AppImage
+          if-no-files-found: error
+
+  linux-compatibility:
+    name: Install / ${{ matrix.runner }}
+    needs: linux
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - arch: amd64
+            runner: ubuntu-24.04
+          - arch: arm64
+            runner: ubuntu-24.04-arm
+          - arch: amd64
+            runner: ubuntu-26.04
+          - arch: arm64
+            runner: ubuntu-26.04-arm
+    runs-on: ${{ matrix.runner }}
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: purr-pause-linux-${{ matrix.arch }}
+          path: dist
+      - name: Install the Ubuntu 22.04 package on a newer distribution
+        run: |
+          mkdir -p verification
+          sudo apt-get update
+          sudo apt-get install -y xvfb dbus-x11
+          chmod +x dist/*.AppImage
+          dbus-run-session -- xvfb-run -a dist/*.AppImage --appimage-extract-and-run \
+            --verify-install --verification-report "$PWD/verification/appimage.json" \
+            --data-dir "$RUNNER_TEMP/purr-pause-appimage-forward"
+          sudo apt-get install -y xvfb dbus-x11 ./dist/*.deb
+          if ldd /usr/bin/purr-pause | grep -q 'not found'; then exit 1; fi
+          dbus-run-session -- xvfb-run -a /usr/bin/purr-pause --smoke-test --data-dir "$RUNNER_TEMP/purr-pause-smoke-forward"
+          dbus-run-session -- xvfb-run -a /usr/bin/purr-pause --verify-install \
+            --verification-report "$PWD/verification/deb.json" --data-dir "$RUNNER_TEMP/purr-pause-verify-forward"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: native-evidence-${{ matrix.runner }}
+          path: verification/
+          if-no-files-found: warn
+
+  macos:
+    name: macOS / ${{ matrix.arch }} / deployment target 12.0
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - arch: x86_64
+            runner: macos-15-intel
+          - arch: arm64
+            runner: macos-15
+    runs-on: ${{ matrix.runner }}
+    env:
+      MACOSX_DEPLOYMENT_TARGET: '12.0'
+      PURR_ARCH: ${{ matrix.arch }}
+      PURR_DEPS_PREFIX: ${{ github.workspace }}/.deps/macos-${{ matrix.arch }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Validate optional release signing credentials
+        if: startsWith(github.ref, 'refs/tags/')
+        env:
+          CERTIFICATE: ${{ secrets.MACOS_CERTIFICATE_P12_BASE64 }}
+          CERTIFICATE_PASSWORD: ${{ secrets.MACOS_CERTIFICATE_PASSWORD }}
+          SIGN_IDENTITY: ${{ secrets.MACOS_SIGN_IDENTITY }}
+          APPLE_ID: ${{ secrets.APPLE_ID }}
+          APPLE_APP_PASSWORD: ${{ secrets.APPLE_APP_PASSWORD }}
+          APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
+        run: |
+          python3 - <<'PY'
+          import os
+          signing = ('CERTIFICATE', 'CERTIFICATE_PASSWORD', 'SIGN_IDENTITY')
+          notary = ('APPLE_ID', 'APPLE_APP_PASSWORD', 'APPLE_TEAM_ID')
+          for group, label in ((signing, 'Developer ID signing'), (notary, 'Apple notarization')):
+              supplied = [key for key in group if os.environ.get(key)]
+              if supplied and len(supplied) != len(group):
+                  missing = ', '.join(key for key in group if not os.environ.get(key))
+                  raise SystemExit(f'Incomplete {label} configuration; missing: {missing}')
+          if any(os.environ.get(key) for key in notary) and not all(os.environ.get(key) for key in signing):
+              raise SystemExit('Notarization credentials require a complete Developer ID signing configuration')
+          print('Signing credential configuration is complete or entirely absent')
+          PY
+      - name: Install build tools
+        run: brew install ninja pkg-config nasm
+      - name: Install pinned Qt (universal macOS archive)
+        uses: jurplel/install-qt-action@v4
+        with:
+          version: '6.5.3'
+          host: mac
+          target: desktop
+          arch: clang_64
+          cache: true
+      - name: Cache source-built macOS dependencies
+        id: dependencies
+        uses: actions/cache@v4
+        with:
+          path: .deps/macos-${{ matrix.arch }}
+          key: native-macos12-${{ matrix.arch }}-${{ hashFiles('scripts/build-macos-deps.sh') }}
+      - name: Build codec and crypto libraries for macOS 12
+        if: steps.dependencies.outputs.cache-hit != 'true'
+        run: scripts/build-macos-deps.sh "$PURR_DEPS_PREFIX"
+      - name: Configure and build
+        run: |
+          mkdir -p logs
+          export PKG_CONFIG_PATH="$PURR_DEPS_PREFIX/lib/pkgconfig${PKG_CONFIG_PATH:+:$PKG_CONFIG_PATH}"
+          cmake -S . -B build -G Ninja -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=ON \
+            -DCMAKE_OSX_DEPLOYMENT_TARGET=12.0 -DCMAKE_OSX_ARCHITECTURES="$PURR_ARCH" \
+            -DCMAKE_PREFIX_PATH="$QT_ROOT_DIR;$PURR_DEPS_PREFIX" -DOPENSSL_ROOT_DIR="$PURR_DEPS_PREFIX" 2>&1 | tee logs/configure.log
+          cmake --build build --parallel 4 2>&1 | tee logs/build.log
+      - name: Test
+        run: ctest --test-dir build --output-on-failure 2>&1 | tee logs/ctest.log
+        env:
+          QT_QPA_PLATFORM: offscreen
+      - name: Check release version
+        if: startsWith(github.ref, 'refs/tags/')
+        env:
+          TAG: ${{ github.ref_name }}
+        run: test "$TAG" = "v$(sed -n 's/^CMAKE_PROJECT_VERSION:STATIC=//p' build/CMakeCache.txt)"
+      - name: Configure optional Developer ID signing
+        if: startsWith(github.ref, 'refs/tags/')
+        env:
+          CERTIFICATE: ${{ secrets.MACOS_CERTIFICATE_P12_BASE64 }}
+          CERTIFICATE_PASSWORD: ${{ secrets.MACOS_CERTIFICATE_PASSWORD }}
+          SIGN_IDENTITY: ${{ secrets.MACOS_SIGN_IDENTITY }}
+          APPLE_ID: ${{ secrets.APPLE_ID }}
+          APPLE_APP_PASSWORD: ${{ secrets.APPLE_APP_PASSWORD }}
+          APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
+        run: |
+          if [[ -z "$CERTIFICATE" ]]; then
+            echo 'No Developer ID certificate configured; building ad hoc signed DMG.'
+            exit 0
+          fi
+          test -n "$SIGN_IDENTITY"
+          keychain="$RUNNER_TEMP/purr-pause.keychain-db"
+          password="$(openssl rand -hex 24)"
+          echo "::add-mask::$password"
+          printf '%s' "$CERTIFICATE" | base64 --decode > "$RUNNER_TEMP/certificate.p12"
+          security create-keychain -p "$password" "$keychain"
+          security set-keychain-settings -lut 21600 "$keychain"
+          security unlock-keychain -p "$password" "$keychain"
+          security import "$RUNNER_TEMP/certificate.p12" -P "$CERTIFICATE_PASSWORD" -A -t cert -f pkcs12 -k "$keychain"
+          security list-keychains -d user -s "$keychain" "$HOME/Library/Keychains/login.keychain-db"
+          security set-key-partition-list -S apple-tool:,apple:,codesign: -s -k "$password" "$keychain"
+          rm -f "$RUNNER_TEMP/certificate.p12"
+          echo "MACOS_SIGN_IDENTITY=$SIGN_IDENTITY" >> "$GITHUB_ENV"
+          if [[ -n "$APPLE_ID" && -n "$APPLE_APP_PASSWORD" && -n "$APPLE_TEAM_ID" ]]; then
+            xcrun notarytool store-credentials purr-pause-notary --apple-id "$APPLE_ID" \
+              --password "$APPLE_APP_PASSWORD" --team-id "$APPLE_TEAM_ID" --keychain "$keychain"
+            echo 'MACOS_NOTARY_PROFILE=purr-pause-notary' >> "$GITHUB_ENV"
+            echo "MACOS_NOTARY_KEYCHAIN=$keychain" >> "$GITHUB_ENV"
+          fi
+      - name: Bundle libraries, verify deployment targets and create DMG
+        run: |
+          scripts/package-macos.sh build/purr-pause.app dist 2>&1 | tee logs/package-and-install-verification.log
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: native-evidence-macos-${{ matrix.arch }}
+          path: |
+            logs/
+            dist/verification/
+            build/Testing/Temporary/
+            build/CMakeFiles/CMakeConfigureLog.yaml
+          if-no-files-found: warn
+      - name: Remove temporary signing credentials
+        if: always()
+        run: |
+          if [[ -f "$RUNNER_TEMP/purr-pause.keychain-db" ]]; then
+            security delete-keychain "$RUNNER_TEMP/purr-pause.keychain-db"
+          fi
+          rm -f "$RUNNER_TEMP/certificate.p12"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: purr-pause-macos-${{ matrix.arch }}
+          path: dist/*.dmg
+          if-no-files-found: error
+
+  release:
+    name: Publish tagged GitHub release
+    needs: [packaging-checks, linux, linux-compatibility, macos]
+    if: startsWith(github.ref, 'refs/tags/')
+    runs-on: ubuntu-22.04
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: purr-pause-*
+          path: dist
+          merge-multiple: true
+      - name: Add source and license materials
+        env:
+          TAG: ${{ github.ref_name }}
+        run: |
+          git archive --format=tar.gz --prefix="purr-pause-${TAG#v}/" -o "dist/purr-pause-${TAG#v}-source.tar.gz" HEAD
+          cd dist
+          sha256sum ./*.deb ./*.AppImage ./*.dmg ./*-source.tar.gz > SHA256SUMS
+      - name: Publish release artifacts
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ github.ref_name }}
+        run: |
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            gh release upload "$TAG" dist/* --clobber
+          else
+            gh release create "$TAG" dist/* --verify-tag --generate-notes --title "PurrPause ${TAG#v}"
+          fi

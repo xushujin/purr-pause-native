@@ -1,0 +1,294 @@
+{
+  "schemaVersion": 1,
+  "kind": "reference",
+  "electronVersion": "33.2.1",
+  "chromiumVersion": "130.0.6723.137",
+  "platform": "linux",
+  "os": "7.0.0-42-generic",
+  "architecture": "x64",
+  "timezone": "Asia/Shanghai",
+  "devicePixelRatio": 1,
+  "fixtureSha256": "d29466c75ceec0da0de49cd8448dd2656f4716f076516c4cfc4f94511181527f",
+  "pages": [
+    {
+      "id": "settings",
+      "image": "original-settings.png",
+      "bindings": {
+        "threshold": {
+          "value": 45,
+          "visible": true,
+          "enabled": true,
+          "rect": {
+            "x": 273.90625,
+            "y": 98,
+            "width": 70,
+            "height": 32
+          },
+          "font": {
+            "family": "Arial",
+            "pixelSize": 15.2,
+            "weight": 400,
+            "italic": false
+          }
+        },
+        "duration": {
+          "value": 5,
+          "visible": true,
+          "enabled": true,
+          "rect": {
+            "x": 273.90625,
+            "y": 159,
+            "width": 70,
+            "height": 32
+          },
+          "font": {
+            "family": "Arial",
+            "pixelSize": 15.2,
+            "weight": 400,
+            "italic": false
+          }
+        },
+        "mode": {
+          "value": "walk-center",
+          "visible": true,
+          "enabled": false,
+          "rect": {
+            "x": 267,
+            "y": 220,
+            "width": 114,
+            "height": 32
+          },
+          "font": {
+            "family": "Arial",
+            "pixelSize": 14.4,
+            "weight": 400,
+            "italic": false
+          }
+        },
+        "autostart": {
+          "value": true,
+          "visible": true,
+          "enabled": true,
+          "rect": {
+            "x": 363,
+            "y": 347,
+            "width": 18,
+            "height": 18
+          },
+          "font": {
+            "family": "Arial",
+            "pixelSize": 13.3333,
+            "weight": 400,
+            "italic": false
+          }
+        },
+        "logging": {
+          "value": false,
+          "visible": true,
+          "enabled": true,
+          "rect": {
+            "x": 363,
+            "y": 408,
+            "width": 18,
+            "height": 18
+          },
+          "font": {
+            "family": "Arial",
+            "pixelSize": 13.3333,
+            "weight": 400,
+            "italic": false
+          }
+        }
+      },
+      "width": 440,
+      "height": 520,
+      "devicePixelRatio": 1,
+      "bodyHeight": 542,
+      "text": "胖猫暂停一下（PurrPause） 设置\n屏幕使用时间\n连续使用多久后提醒休息\n 分钟\n休息时长\n每次休息持续多久\n 分钟\n动画模式\n猫咪出现的方式\n右下角走出\n中央淡入\n右侧走出\n中央走出\n素材目录\n激活后可自定义素材目录\n选择\n重置\n开机自动启动\n系统启动时自动运行 胖猫暂停一下（PurrPause）\n运行日志\n记录运行信息到日志文件，用于排查问题（默认关闭）\n取消\n保存",
+      "font": "system-ui, -apple-system, sans-serif"
+    },
+    {
+      "id": "message-settings",
+      "image": "original-message-settings.png",
+      "bindings": {
+        "enabled": {
+          "value": true,
+          "visible": true,
+          "enabled": true,
+          "rect": {
+            "x": 445,
+            "y": 114.5,
+            "width": 40,
+            "height": 22
+          },
+          "font": {
+            "family": "Arial",
+            "pixelSize": 13.3333,
+            "weight": 400,
+            "italic": false
+          }
+        },
+        "sourceName": {
+          "value": "绘家科技",
+          "visible": true,
+          "enabled": true,
+          "rect": {
+            "x": 39,
+            "y": 229,
+            "width": 359,
+            "height": 34
+          },
+          "font": {
+            "family": "Arial",
+            "pixelSize": 15.2,
+            "weight": 600,
+            "italic": false
+          }
+        },
+        "sourceUrl": {
+          "value": "https://example.com/todos",
+          "visible": true,
+          "enabled": true,
+          "rect": {
+            "x": 39,
+            "y": 298,
+            "width": 447,
+            "height": 32
+          },
+          "font": {
+            "family": "Arial",
+            "pixelSize": 14.4,
+            "weight": 400,
+            "italic": false
+          }
+        },
+        "sourceCount": {
+          "value": "1",
+          "visible": true,
+          "enabled": true,
+          "rect": {
+            "x": 75.1875,
+            "y": 184,
+            "width": 25.328125,
+            "height": 16
+          },
+          "font": {
+            "family": "system-ui, -apple-system, sans-serif",
+            "pixelSize": 11.52,
+            "weight": 500,
+            "italic": false
+          }
+        }
+      },
+      "width": 540,
+      "height": 660,
+      "devicePixelRatio": 1,
+      "bodyHeight": 702,
+      "text": "消息提醒设置\n配置一个或多个第三方接口源，胖猫会轮询待办并用小火箭提醒你。\n启用消息提醒\n关闭后停止所有接口源的轮询并隐藏待办角标\n接口源\n1\n📄 下载接口规范\n×\n待办接口地址（完整 URL）\n完整的待办列表接口地址，PurrPause 只在其后追加 limit/offset\n推荐 https://你的域名/purr-pause/v1/todos\n▸\n请求头（可选）\n测试连接\n＋ 添加接口源\n更多\n▸\n全局设置\n轮询间隔 / 每源条数 / 小火箭素材\n取消\n保存",
+      "font": "system-ui, -apple-system, sans-serif"
+    },
+    {
+      "id": "message-list",
+      "image": "original-message-list.png",
+      "bindings": {
+        "refresh": {
+          "value": "刷新",
+          "visible": true,
+          "enabled": true,
+          "rect": {
+            "x": 430.828125,
+            "y": 72,
+            "width": 74.171875,
+            "height": 36
+          },
+          "font": {
+            "family": "Arial",
+            "pixelSize": 14.08,
+            "weight": 700,
+            "italic": false
+          }
+        }
+      },
+      "width": 560,
+      "height": 720,
+      "devicePixelRatio": 1,
+      "bodyHeight": 724,
+      "text": "待办消息\n待办消息（3）\n刷新\n最后刷新 2026/11/7 14:30:00\n全部\n3\n绘家科技\n3\n待审核：十一月项目进度报告\n绘家科技\n请查看本周进展和下周工作安排，确认后完成审批。\nNORMAL\n2026-11-07T14:30:00+08:00\n待审核：十一月项目进度报告\n绘家科技\n请查看本周进展和下周工作安排，确认后完成审批。\nNORMAL\n2026-11-07T14:30:00+08:00\n待审核：十一月项目进度报告\n绘家科技\n请查看本周进展和下周工作安排，确认后完成审批。\nNORMAL\n2026-11-07T14:30:00+08:00\n暂无待办消息",
+      "font": "system-ui, -apple-system, sans-serif"
+    },
+    {
+      "id": "activation",
+      "image": "original-activation.png",
+      "bindings": {
+        "license": {
+          "value": "试用中（剩余 7 天）",
+          "visible": true,
+          "enabled": true,
+          "rect": {
+            "x": 44,
+            "y": 117,
+            "width": 111.265625,
+            "height": 17
+          },
+          "font": {
+            "family": "system-ui, -apple-system, sans-serif",
+            "pixelSize": 12,
+            "weight": 400,
+            "italic": false
+          }
+        },
+        "machine": {
+          "value": "0123456789abcdef",
+          "visible": true,
+          "enabled": true,
+          "rect": {
+            "x": 283.453125,
+            "y": 164,
+            "width": 154.953125,
+            "height": 22
+          },
+          "font": {
+            "family": "monospace",
+            "pixelSize": 13.6,
+            "weight": 400,
+            "italic": false
+          }
+        },
+        "serial": {
+          "value": "",
+          "visible": true,
+          "enabled": true,
+          "rect": {
+            "x": 44,
+            "y": 245,
+            "width": 452,
+            "height": 80
+          },
+          "font": {
+            "family": "monospace",
+            "pixelSize": 12.8,
+            "weight": 400,
+            "italic": false
+          }
+        }
+      },
+      "width": 540,
+      "height": 540,
+      "devicePixelRatio": 1,
+      "bodyHeight": 432,
+      "text": "激活 胖猫暂停一下（PurrPause）\n授权状态\n试用中（剩余 7 天）\n机器码\n将此机器码发送给开发者获取序列号\n0123456789abcdef\n复制\n序列号\n稍后再说\n激活",
+      "font": "system-ui, -apple-system, sans-serif"
+    },
+    {
+      "id": "rules",
+      "image": "original-rules.png",
+      "bindings": {},
+      "width": 950,
+      "height": 570,
+      "devicePixelRatio": 1,
+      "bodyHeight": 461,
+      "text": "计时规则说明\n优先级\t条件\t行为\n1\t动画正在显示\t跳过，不检测；解锁时若锁屏超过 10 分钟则计时归零\n2\t用户手动暂停监控\t跳过，不检测\n3\t屏幕已锁定\t跳过，不检测\n4\t系统休眠后唤醒\t休眠超过 10 分钟则计时归零；短时休眠继续累计\n5\t距上次鼠标/键盘操作 > 10 分钟\t计时归零（视为已休息）\n6\t距上次鼠标/键盘操作 < 3 分钟\t计时 +10 秒（视为活跃）\n7\t距上次鼠标/键盘操作 3~10 分钟\t不累加也不归零（暂停）\n8\t累计活跃时间 ≥ 设定阈值\t触发猫咪动画\n\n每 10 秒检测一次，按优先级从上到下判断。",
+      "font": "system-ui, -apple-system, sans-serif"
+    }
+  ]
+}

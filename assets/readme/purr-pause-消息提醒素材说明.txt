@@ -1,0 +1,25 @@
+=== 胖猫暂停一下（PurrPause） 消息提醒素材说明 ===
+
+将你的小火箭提醒 .webm 视频文件放在此目录下即可替换消息提醒动画素材。
+
+默认文件名：
+  - notify-rocket.webm → 小火箭消息提醒动画
+
+文件要求：
+  - 格式：WebM（VP9 编码，带 Alpha 通道实现透明背景）
+  - 背景：必须透明，否则会遮挡桌面
+  - 建议尺寸：240x240 左右
+  - 建议时长：2~4 秒，火箭主体保持在画面中间
+
+查找顺序：
+  1. 消息提醒设置中的“小火箭素材目录”
+  2. 通用素材目录
+  3. 用户默认素材目录 ~/.config/purr-pause/webm/
+  4. 应用内置素材目录
+
+如需使用其他文件名，请在“消息提醒设置”中修改“小火箭素材”。
+文件名只能填写文件名，例如 notify-rocket.webm，不能包含目录分隔符。
+
+制作建议：
+  - 使用 FFmpeg 导出带 Alpha 通道的 WebM：
+    ffmpeg -i input.mov -c:v libvpx-vp9 -pix_fmt yuva420p -b:v 2M notify-rocket.webm

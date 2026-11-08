@@ -1,0 +1,205 @@
+{
+  "schemaVersion": 1,
+  "electronVersion": "33.2.1",
+  "timezone": "Asia/Shanghai",
+  "nativeFont": "DejaVu Sans",
+  "config": {
+    "thresholdMinutes": 45,
+    "breakMinutes": 5,
+    "animationMode": "walk-center",
+    "messageNotifyEnabled": true,
+    "messageSources": [
+      {
+        "id": "work",
+        "name": "绘家科技",
+        "enabled": true,
+        "listUrl": "https://example.com/todos",
+        "authHeaders": "{}",
+        "badgeCount": 3,
+        "itemCount": 3,
+        "color": "#2f80ed"
+      }
+    ],
+    "_isActivated": false,
+    "_autoLaunch": true
+  },
+  "license": {
+    "status": "trial",
+    "daysLeft": 7,
+    "machineId": "0123456789abcdef"
+  },
+  "state": {
+    "enabled": true,
+    "configured": true,
+    "badgeCount": 3,
+    "items": [
+      {
+        "id": "0",
+        "title": "待审核：十一月项目进度报告",
+        "summary": "请查看本周进展和下周工作安排，确认后完成审批。",
+        "createdAt": "2026-11-07T14:30:00+08:00",
+        "level": "normal",
+        "targetUrl": "https://example.com",
+        "origin": {
+          "id": "work",
+          "name": "绘家科技",
+          "color": "#2f80ed"
+        }
+      },
+      {
+        "id": "1",
+        "title": "待审核：十一月项目进度报告",
+        "summary": "请查看本周进展和下周工作安排，确认后完成审批。",
+        "createdAt": "2026-11-07T14:30:00+08:00",
+        "level": "normal",
+        "targetUrl": "https://example.com",
+        "origin": {
+          "id": "work",
+          "name": "绘家科技",
+          "color": "#2f80ed"
+        }
+      },
+      {
+        "id": "2",
+        "title": "待审核：十一月项目进度报告",
+        "summary": "请查看本周进展和下周工作安排，确认后完成审批。",
+        "createdAt": "2026-11-07T14:30:00+08:00",
+        "level": "normal",
+        "targetUrl": "https://example.com",
+        "origin": {
+          "id": "work",
+          "name": "绘家科技",
+          "color": "#2f80ed"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "work",
+        "name": "绘家科技",
+        "enabled": true,
+        "listUrl": "https://example.com/todos",
+        "authHeaders": "{}",
+        "badgeCount": 3,
+        "itemCount": 3,
+        "color": "#2f80ed"
+      }
+    ],
+    "lastRefreshAt": "2026-11-07T14:30:00+08:00"
+  },
+  "pages": [
+    {
+      "id": "settings",
+      "width": 440,
+      "height": 520,
+      "bindings": [
+        {
+          "key": "threshold",
+          "reference": "#thresholdMinutes",
+          "native": "thresholdMinutes",
+          "expected": 45
+        },
+        {
+          "key": "duration",
+          "reference": "#breakMinutes",
+          "native": "breakMinutes",
+          "expected": 5
+        },
+        {
+          "key": "mode",
+          "reference": "#animationMode",
+          "native": "animationMode",
+          "expected": "walk-center"
+        },
+        {
+          "key": "autostart",
+          "reference": "#autoLaunch",
+          "native": "autoLaunch",
+          "expected": true
+        },
+        {
+          "key": "logging",
+          "reference": "#logEnabled",
+          "native": "logEnabled",
+          "expected": false
+        }
+      ]
+    },
+    {
+      "id": "message-settings",
+      "width": 540,
+      "height": 660,
+      "bindings": [
+        {
+          "key": "enabled",
+          "reference": "#messageNotifyEnabled",
+          "native": "messageNotifyEnabled",
+          "expected": true,
+          "referenceGeometry": ".master .switch"
+        },
+        {
+          "key": "sourceName",
+          "reference": ".name-input",
+          "native": "sourceName",
+          "expected": "绘家科技"
+        },
+        {
+          "key": "sourceUrl",
+          "reference": ".url-input",
+          "native": "sourceUrl",
+          "expected": "https://example.com/todos"
+        },
+        {
+          "key": "sourceCount",
+          "reference": "#sourceCount",
+          "native": "sourceCount",
+          "expected": "1"
+        }
+      ]
+    },
+    {
+      "id": "message-list",
+      "width": 560,
+      "height": 720,
+      "bindings": [
+        {
+          "key": "refresh",
+          "reference": "#refreshBtn",
+          "native": "refreshMessages",
+          "expected": "刷新"
+        }
+      ]
+    },
+    {
+      "id": "activation",
+      "width": 540,
+      "height": 540,
+      "bindings": [
+        {
+          "key": "license",
+          "reference": "#statusText",
+          "native": "licenseStatus",
+          "expected": "试用中（剩余 7 天）"
+        },
+        {
+          "key": "machine",
+          "reference": "#machineId",
+          "native": "machineId",
+          "expected": "0123456789abcdef"
+        },
+        {
+          "key": "serial",
+          "reference": "#serialInput",
+          "native": "serialKey",
+          "expected": ""
+        }
+      ]
+    },
+    {
+      "id": "rules",
+      "width": 950,
+      "height": 570,
+      "bindings": []
+    }
+  ]
+}

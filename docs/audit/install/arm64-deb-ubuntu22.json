@@ -1,0 +1,28 @@
+{
+    "architecture": "arm64",
+    "assets": "/usr/share/purr-pause/assets",
+    "docs": "/usr/share/purr-pause/docs",
+    "executable": "/usr/bin/purr-pause",
+    "ok": true,
+    "platform": "xcb",
+    "qtVersion": "6.2.4",
+    "tlsBackend": "openssl",
+    "tlsLibrary": "OpenSSL 3.0.2 15 Mar 2022",
+    "version": "1.5.0",
+    "videos": [
+        {
+            "file": "cat-walk.webm",
+            "height": 1080,
+            "opaque": true,
+            "transparent": true,
+            "width": 1920
+        },
+        {
+            "file": "cat-rest.webm",
+            "height": 1080,
+            "opaque": true,
+            "transparent": true,
+            "width": 1920
+        }
+    ]
+}

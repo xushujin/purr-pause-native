@@ -1,0 +1,384 @@
+{
+  "date": "2026-11-08",
+  "reference": {
+    "electron": "33.2.1",
+    "chromium": "130.0.6723.137",
+    "linux_x64_archive_sha256": "3b66a507ece29684a105b0f9609db50c88235333ddad696d01eefebefd4b1aab",
+    "fixturesManifest": "tests/reference/manifest.json",
+    "fixturesManifestSha256": "daf9ff3f190dc055295e36fa5fa40022ef63702e81fb4813f512bb943b0878d3"
+  },
+  "sourceFiles": [
+    {
+      "path": ".github/actionlint.yaml",
+      "sha256": "c4d72934276cf6c727c675aa987d2af5d21608dddccbcbab4f28fd51fe3a39ac"
+    },
+    {
+      "path": ".github/workflows/native.yml",
+      "sha256": "c4256f5686d7a25422c68f3a77101df11107299de4195eb50e0ec8f7a246970c"
+    },
+    {
+      "path": "CMakeLists.txt",
+      "sha256": "938a245cc7e3af6068544aaacbad37a46c319a76418a1af07b154c3be9e9ca73"
+    },
+    {
+      "path": "assets/icon.icns",
+      "sha256": "2a7b6da66d272da43318cecd720e56cdec670093d8e72d68fc45ce6c48ffb343"
+    },
+    {
+      "path": "assets/images/logo.png",
+      "sha256": "20984ee7b07c96f6d84bf5572927d7d080db778decb229e4ff339c9a034fd7c9"
+    },
+    {
+      "path": "assets/images/rocket.svg",
+      "sha256": "424629b7b67893981e91607d0c96b39aeb6c09c42bc60d641b08dc54800fe6d5"
+    },
+    {
+      "path": "assets/images/tray-icon.png",
+      "sha256": "db88462e1428669146d6a25fd1135ecbb18e63bbdf83a3ad5469c4628e074483"
+    },
+    {
+      "path": "assets/readme/purr-pause-消息提醒素材说明.txt",
+      "sha256": "6ada69bc7bfc5789934f503f93dc255cd8cd84a858c4e61c715a3987ca1d25bd"
+    },
+    {
+      "path": "assets/readme/purr-pause-素材说明.txt",
+      "sha256": "8d9e1ad275e104f7725c0a0a0a979ff7e3b51b6328333b691014a71303307bce"
+    },
+    {
+      "path": "assets/webm/cat-rest.webm",
+      "sha256": "6a9b61672ddfa98ea6c5c83953366fad644ecdf7c803660b8625d169edfea29d"
+    },
+    {
+      "path": "assets/webm/cat-walk.webm",
+      "sha256": "4974c05ee215d01b8752bfbcfad23e967f947a1500dfd5fba73d627f20fd0692"
+    },
+    {
+      "path": "docs/audit/animation/capture-reference.cjs",
+      "sha256": "236339cc24ce81e29b64e8d490ca3a7592027d99e804b5f57290d8721250ef98"
+    },
+    {
+      "path": "packaging/AppRun",
+      "sha256": "1cf2290632971296c1e1d9907484b9954c7432c866bc94f4a3a27240c905250b"
+    },
+    {
+      "path": "packaging/Info.plist.in",
+      "sha256": "c25c08d72e65a3226f62a18427e18814bb0f8bcb62e21bae018e4042562d8b63"
+    },
+    {
+      "path": "packaging/appimage-fonts.conf",
+      "sha256": "e8c7bdd01207625c753bb24b12a43b4996698f944af7403ed694527c12f13cb5"
+    },
+    {
+      "path": "packaging/appimage-runtime-LICENSE",
+      "sha256": "cabd8873ef20294352f71275ee817497d12e54784fa28a3a3924ac9a6c5d2380"
+    },
+    {
+      "path": "packaging/appimage-runtime.tsv",
+      "sha256": "11b97c5d63b9e24170c5ddf053a0f76cd7624caeed37c9f4ab332bb9c29182f6"
+    },
+    {
+      "path": "packaging/entitlements.plist",
+      "sha256": "55a9c3dbd2e3925788619684eace456de8fcbdd4e0afb681237cdcff36d6bda9"
+    },
+    {
+      "path": "packaging/postinst",
+      "sha256": "415496dbfb37391cfb4cb2f39560e5a9b9c54cab1d1f5151e6f286ae77536c2e"
+    },
+    {
+      "path": "packaging/postrm",
+      "sha256": "415496dbfb37391cfb4cb2f39560e5a9b9c54cab1d1f5151e6f286ae77536c2e"
+    },
+    {
+      "path": "packaging/purr-pause.desktop",
+      "sha256": "58773e8dba920b283fec81b93ae04819f58a142bdb3bcd0f4f73efe36e2265ea"
+    },
+    {
+      "path": "scripts/build-linux-codecs.sh",
+      "sha256": "f831d7584f0ea9c8d4b2d7276593c76310157101b1048e08586d70a99749c0bd"
+    },
+    {
+      "path": "scripts/build-macos-deps.sh",
+      "sha256": "f6079a8845303d2f98387325c7da7a24d9a1b493f03bdd7475b394c7fe2a4cf2"
+    },
+    {
+      "path": "scripts/bundle-appimage-libs.py",
+      "sha256": "25203e61dd5c4992da12709e6cead06dec0f0254fea3d5698f2df68ff3ff14b6"
+    },
+    {
+      "path": "scripts/bundle-macos-libs.py",
+      "sha256": "905aa3659b1eaa6662b11b26159a265b96f1fd7edff4631f86cb171bf67e2eab"
+    },
+    {
+      "path": "scripts/capture-visual-reference.cjs",
+      "sha256": "641f3edc601535781e2f071bb0125f9ce0326a8f621c48d89dd473b0bd334b31"
+    },
+    {
+      "path": "scripts/compare-visual.py",
+      "sha256": "81d10b31868e12fd8a1c894a8fcc75ec1948c17bee63bf38711772fd754b7ff4"
+    },
+    {
+      "path": "scripts/package-appimage.sh",
+      "sha256": "a98b0ea1330e7bd4bf8947ac388bc88c09be303d42a50cfb35eed7f398e65916"
+    },
+    {
+      "path": "scripts/package-linux.sh",
+      "sha256": "ae6a0ca567b50e44b0b5d2a92f1de75c7b573f0bbe75c225f1569abc0656f354"
+    },
+    {
+      "path": "scripts/package-macos.sh",
+      "sha256": "daf4b9e3d254bddf62b122e6df9b2b81f3bf75b0d0ef594a65a4cd3b6153d9bf"
+    },
+    {
+      "path": "scripts/verify-macos-package.sh",
+      "sha256": "0267aec72be48be9b794cc099cdcf1115193993a3e10a01eb1a436aa87beaf99"
+    },
+    {
+      "path": "src/application.cpp",
+      "sha256": "cba2eba44fc4372729d38aadb8f1f034203167375c28b7b3708bec66628ed175"
+    },
+    {
+      "path": "src/application.h",
+      "sha256": "4644d40c7ca6a564da202a6b789e029d1cb5d7daa355162cfb0e8b3b22e29b19"
+    },
+    {
+      "path": "src/core.cpp",
+      "sha256": "3fbe1d0520e40bad09612d42252374a77cd1e82098a4eb4e4ab390766cbe6adb"
+    },
+    {
+      "path": "src/core.h",
+      "sha256": "94c7e512360a0044969ab21bbdcc7a9dab14a8cd6b8b0aec019068185a51ca76"
+    },
+    {
+      "path": "src/dialogs.cpp",
+      "sha256": "388c314d6fc2e77770f77fa4918ab97d84be8695f08f6b5e6f0e755daae7f0b1"
+    },
+    {
+      "path": "src/dialogs.h",
+      "sha256": "3cb87dc4386136ed8ca129bba47b75df3bfbd7ebd711ad23f9f3a3152d9d7622"
+    },
+    {
+      "path": "src/installation.cpp",
+      "sha256": "a2e40b9326f502aeff5fb141288c099f6cdbf357da0a5f8a5b175cb34a36d633"
+    },
+    {
+      "path": "src/installation.h",
+      "sha256": "f62999322d649e9bddc306b1b51ca682d8eed98f7eef3dd4c2fcab9b4b5b398e"
+    },
+    {
+      "path": "src/main.cpp",
+      "sha256": "f6a01fff3d015358639a049cdbf52d9df73504426a64b7c9b048097ba9910a7c"
+    },
+    {
+      "path": "src/media.cpp",
+      "sha256": "f8ad7dc4c696b9bfbdaf21b184216cccc67fa96b7988e5e94afa4ab5c222ff46"
+    },
+    {
+      "path": "src/media.h",
+      "sha256": "05b02d8f8256d90dd5b7329654233a20cb38c3c700de9ba46c98c839ecd9923b"
+    },
+    {
+      "path": "src/messages.cpp",
+      "sha256": "39d62f6fbd97394c34aa8c5aeb5f2b0bdb264058433b5e4d7b5612aad11d6d4f"
+    },
+    {
+      "path": "src/messages.h",
+      "sha256": "bc35ffc8d721ef5027e2a2a186ee61182b0fb01df521daf36443d08cd74ffa0b"
+    },
+    {
+      "path": "src/overlays.cpp",
+      "sha256": "39b5e81680649e05488d31d15e14088dbcbabf7d67422251bb212c7b03750a76"
+    },
+    {
+      "path": "src/overlays.h",
+      "sha256": "c25f199de11b2d9476db49438ae9de37172b3e2eaf1007fb7f3a0e25e7e20d6e"
+    },
+    {
+      "path": "src/platform.h",
+      "sha256": "80e26a7218be0c4805114f1ca97682c71e60e19ebb2eeaa8a7eac1f61a13acb6"
+    },
+    {
+      "path": "src/platform_linux.cpp",
+      "sha256": "7fb6b15b77cf00e4509897774dadf0d769138ad124e4f20f73b6fdd874a69823"
+    },
+    {
+      "path": "src/platform_mac.mm",
+      "sha256": "d9159966bcac42d97f057c51b9bc3e38dcc3579d13a5b39b1e242998bef7d7fc"
+    },
+    {
+      "path": "tests/fixtures/wide-vp9.webm",
+      "sha256": "9e93e58994809961c48038eacf7c7ad773661d989f1bb77afb129b6b2e3c049e"
+    },
+    {
+      "path": "tests/reference/LICENSE",
+      "sha256": "a24771d1c90c6ee368e599b0be3edca57e2cccc8ff1048e77435580f941a4287"
+    },
+    {
+      "path": "tests/reference/README.md",
+      "sha256": "8c85f680704ab492bd6254a63b054c2fde0c453a441ed443d97c0a78f4a0df72"
+    },
+    {
+      "path": "tests/reference/behavior/save-config.js",
+      "sha256": "7b0faba72175b3e3d55cc958b32164813f3b5bd820dfe03d95499c079c5c8c5c"
+    },
+    {
+      "path": "tests/reference/behavior/start-monitoring.js",
+      "sha256": "4f1eabb048201d670cdfe64e30930cc89ec7684ae952a7f9475cb47f61f0897d"
+    },
+    {
+      "path": "tests/reference/lib/license.js",
+      "sha256": "9e75f41e38b1b19026ae45249d319aea718b20be2dbb60c89e2ad3e0ae07ceff"
+    },
+    {
+      "path": "tests/reference/manifest.json",
+      "sha256": "daf9ff3f190dc055295e36fa5fa40022ef63702e81fb4813f512bb943b0878d3"
+    },
+    {
+      "path": "tests/reference/renderer/activation.html",
+      "sha256": "da666e20ebfbd87b986af6caa1150783f7f420a5736d1bf99c33fdddad35d147"
+    },
+    {
+      "path": "tests/reference/renderer/index.html",
+      "sha256": "38d34e75953ddc8563e36c1a6fb9d5b112d44657dbf23479726f8effd5832449"
+    },
+    {
+      "path": "tests/reference/renderer/message-list.html",
+      "sha256": "c84fc89701e54829643d275df20a3cc96b99754789c177ed6dcf751fcaa8092d"
+    },
+    {
+      "path": "tests/reference/renderer/message-settings.html",
+      "sha256": "46c7a7b24efa66d2643851772a90e0340e1a5450c436aa8685f36b1b4ac7d1e7"
+    },
+    {
+      "path": "tests/reference/renderer/rocket-demo.html",
+      "sha256": "eec7d7a08871a640a4897ff4c5e7f617549b0d14328382f57d5d0e1b41938189"
+    },
+    {
+      "path": "tests/reference/renderer/rules.html",
+      "sha256": "0fac81112a27170fbc3588a7eae88a0ed8a8f1c45cf8d7788a3f79b9b3488d2c"
+    },
+    {
+      "path": "tests/reference/renderer/settings.html",
+      "sha256": "f2a23115070cc73bb9cda403e9aed364bf2148e3610f650ec1a609cb73bbbc13"
+    },
+    {
+      "path": "tests/reference/tools/keygen.js",
+      "sha256": "6dc018b7717a7964ee3290009d7d2dd6ddb82c3c13ef8e25d47b68a9d28e4163"
+    },
+    {
+      "path": "tests/run-desktop.sh",
+      "sha256": "7b46e27b874b054e14beb2669740ceb0861eb170243c1d740f8782283b5f6621"
+    },
+    {
+      "path": "tests/test_application.cpp",
+      "sha256": "b4ca36f91e5d0d551784b599965f0a63202eefc423dfe906f6fc193d939a1712"
+    },
+    {
+      "path": "tests/test_core.cpp",
+      "sha256": "01e6922bfd28718b11e692fc5e99c6568bab0f619223f521ac96828d573e44f3"
+    },
+    {
+      "path": "tests/test_dialogs.cpp",
+      "sha256": "e51c2793bb2b74fff0ae90a0f3258acc73d39c7ece5b6b8c35c6474735f846d2"
+    },
+    {
+      "path": "tests/test_installation.cpp",
+      "sha256": "fd406ff0bb02ffb09591c319ccff1094019d023188720dde258ded6faddff42d"
+    },
+    {
+      "path": "tests/test_instance.cpp",
+      "sha256": "3366aefe9ce3a0021d50cfc986dec2f63f074ceb19ffc1e5c64ec43cff756559"
+    },
+    {
+      "path": "tests/test_macos_packaging.py",
+      "sha256": "0b5f2262b0e71153559abf6ece4a06812bf9742ae651ec97849bf96f38b05911"
+    },
+    {
+      "path": "tests/test_macos_platform.mm",
+      "sha256": "20abd3fd717a93d1e44db56e5b355b6a5145c864a851f1acd2beb3a4279af36d"
+    },
+    {
+      "path": "tests/test_media.cpp",
+      "sha256": "f855270148936c4cd512765b1ab8e30466289c77b3789fa27f70383e8e00e693"
+    },
+    {
+      "path": "tests/test_messages.cpp",
+      "sha256": "378c358c36737a9df8b925da5f0e36b724872226744d25fd966408d1976e29ac"
+    },
+    {
+      "path": "tests/test_platform.cpp",
+      "sha256": "6877ebac8761d2be94198c20d7cf522f141137f86f6d236daf3a3ba578d99593"
+    },
+    {
+      "path": "tests/test_screens.cpp",
+      "sha256": "62c4df4e6717597957c618bc8a0eb53a52da271269c7557838f3e1e47d2431e2"
+    },
+    {
+      "path": "tests/test_ui.cpp",
+      "sha256": "2930bbd0d161bd97b35b2f21ad40bb0c3e7fb9dfa88feb58280aff1ea7fcac1f"
+    },
+    {
+      "path": "tests/visual/README.md",
+      "sha256": "1c29b9b97f1d4d88407e47d25573b7e098a6f6cb34b3cd3412df5d30f54a5c40"
+    },
+    {
+      "path": "tests/visual/capture_native.cpp",
+      "sha256": "50e4ddec8955a0e19c5db1b4d33b17a930fd1d22eb5f2db9d1df2653fd69df00"
+    },
+    {
+      "path": "tests/visual/fixture.json",
+      "sha256": "d29466c75ceec0da0de49cd8448dd2656f4716f076516c4cfc4f94511181527f"
+    },
+    {
+      "path": "tests/visual/reference-preload.cjs",
+      "sha256": "2155de9a19370f43f5c72ff64185feb479482cd850dfc5cc4604dda39b59650a"
+    },
+    {
+      "path": "tests/visual/test_compare_visual.py",
+      "sha256": "f25e36764bc6afe21999e35343d8ef1eb8a0cd4ea506be26ff6ca1fb5cca9127"
+    }
+  ],
+  "verified": {
+    "ubuntu26_x86_64": "12 CTest targets passed; final dialogs/application/installation rerun passed after measuredUI fixes",
+    "ubuntu22_x86_64": "10 CTest targets passed under Ubuntu22.04 userspace with Node20; final affected tests passed",
+    "ubuntu22_arm64": "All10 test targets passed across actual ARM64 runs under QEMU/PRoot; original Node20 reference uses --jitless; .deb installed and AppImage extracted-and-run plus clean no-Qt rootfs VP9 smoke passed",
+    "macos": "Intel/ARM64 platform module compiled and linked with real macOS13.3 SDK+officialQt6.5.3; six additional app source units compile for both targets; Cocoa tests type-check; complete app/DMG execution remains blocked by noMacrunner",
+    "appimage": "Both final complete AppImage files passed --appimage-extract-and-run --smoke-test --test-break in fresh Ubuntu22 no-Qt/no-FFmpeg rootfs (amd64 native, arm64 QEMU); fixed runtime SHA and101 ELF dependency closure verified",
+    "installation": "Five strict installed probes passed: amd64/arm64 deb Ubuntu22, both complete AppImages in clean minimalUbuntu22, amd64AppImage Ubuntu26; TLS+resources+GUI+twoalphaVP9frames",
+    "visual": "Exact Electron33.2.1 andnativeQt fixture captures automated; fivepages data/size/visible/enabled gate passes; six Pythonnegative-case tests pass; selected input geometry corrected to0/subpixel delta; pixel identity remains false",
+    "macosPackagingTests": "16 automatic dependency/load-command/identity/relocation tests passed on Linux; actual Mach-O tool execution awaits Mac runner",
+    "legacyCleanup": "Full old project removed; 12 CTest targets passed with zero Qt skips; five-page capture validation, 88 unchanged animation samples, six visual-tool tests, actionlint and installed resource/TLS/alpha probe passed with old directory absent. See docs/audit/legacy-cleanup.json."
+  },
+  "limitations": [
+    "QEMU does not prove physical ARM desktop behavior",
+    "Xvfb/Openbox is not a physical GNOME Wayland or macOS desktop",
+    "GUI pixel differences remain recorded separately",
+    "macOS build, minimumOS and signed/notarized install evidence still missing"
+  ],
+  "artifacts": [
+    {
+      "path": "dist/purr-pause-1.5.0-aarch64.AppImage",
+      "sizeBytes": 61594120,
+      "sha256": "c69e19fd4dc3aced4084f11f74e2f87870dfd62df19e4b431b7f96cd5c746bf0"
+    },
+    {
+      "path": "dist/purr-pause-1.5.0-x86_64.AppImage",
+      "sizeBytes": 62609912,
+      "sha256": "c96e7a918285ae94a9970d7585611982e18032b9a3bf4ed7edb77be84b14871a"
+    },
+    {
+      "path": "dist/purr-pause_1.5.0_amd64.deb",
+      "sizeBytes": 11668352,
+      "sha256": "4445c4836bbbfe1d8f961a5c22286bf6623b69eea1472bf180a22eeff7176533"
+    },
+    {
+      "path": "dist/purr-pause_1.5.0_arm64.deb",
+      "sizeBytes": 11589966,
+      "sha256": "d16c5fcb11ae738fef4b4231574c6815c556216f88b1561aa1a7f4c7f3c6dd19"
+    }
+  ],
+  "automationStatus": "See docs/AUTOMATION.md: local execution complete; actual MacCI/DMG/sign/notarization/remoteRelease require unavailableenvironment/credentials, not manual acceptance",
+  "legacyCleanup": {
+    "report": "docs/audit/legacy-cleanup.json",
+    "sha256": "36e352550f96dde13221a92073e41ec5439765ad5dbb4e2864acdb2ccc038fe7"
+  }
+}

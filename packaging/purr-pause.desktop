@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Name=胖猫暂停一下
+Name[en]=PurrPause
+Comment=一只胖猫提醒你适时休息
+Comment[en]=A friendly cat reminds you to take a break
+Exec=purr-pause
+Icon=purr-pause
+Terminal=false
+Categories=Utility;
+StartupWMClass=purr-pause
+StartupNotify=false

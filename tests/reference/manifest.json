@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "project": "purr-pause",
+  "version": "1.5.0",
+  "electronVersion": "33.2.1",
+  "originalRoot": "purr-pause/",
+  "purpose": "Immutable test-only reference fixtures; not an application or an installed resource.",
+  "files": [
+    {
+      "path": "behavior/save-config.js",
+      "originalPath": "purr-pause/main.js",
+      "originalSha256": "f7e1a9a6aa78cb0003f1f85765791dc085a7a74481a86d58420509dbfc479f51",
+      "extraction": {
+        "startMarker": "ipcMain.on('save-config'",
+        "endMarkerExclusive": "ipcMain.on('close-settings'",
+        "byteStart": 26566,
+        "byteEndExclusive": 29468,
+        "firstLine": 845,
+        "lastLine": 907
+      },
+      "sha256": "7b0faba72175b3e3d55cc958b32164813f3b5bd820dfe03d95499c079c5c8c5c",
+      "sizeBytes": 2902
+    },
+    {
+      "path": "behavior/start-monitoring.js",
+      "originalPath": "purr-pause/main.js",
+      "originalSha256": "f7e1a9a6aa78cb0003f1f85765791dc085a7a74481a86d58420509dbfc479f51",
+      "extraction": {
+        "startMarker": "function startMonitoring()",
+        "endMarkerExclusive": "function triggerCat(",
+        "byteStart": 9443,
+        "byteEndExclusive": 10457,
+        "firstLine": 308,
+        "lastLine": 344
+      },
+      "sha256": "4f1eabb048201d670cdfe64e30930cc89ec7684ae952a7f9475cb47f61f0897d",
+      "sizeBytes": 1014
+    },
+    {
+      "path": "lib/license.js",
+      "originalPath": "purr-pause/lib/license.js",
+      "originalSha256": "9e75f41e38b1b19026ae45249d319aea718b20be2dbb60c89e2ad3e0ae07ceff",
+      "extraction": "whole-file-byte-identical",
+      "sha256": "9e75f41e38b1b19026ae45249d319aea718b20be2dbb60c89e2ad3e0ae07ceff",
+      "sizeBytes": 8564
+    },
+    {
+      "path": "tools/keygen.js",
+      "originalPath": "purr-pause/tools/keygen.js",
+      "originalSha256": "6dc018b7717a7964ee3290009d7d2dd6ddb82c3c13ef8e25d47b68a9d28e4163",
+      "extraction": "whole-file-byte-identical",
+      "sha256": "6dc018b7717a7964ee3290009d7d2dd6ddb82c3c13ef8e25d47b68a9d28e4163",
+      "sizeBytes": 3800
+    },
+    {
+      "path": "LICENSE",
+      "originalPath": "purr-pause/LICENSE",
+      "originalSha256": "a24771d1c90c6ee368e599b0be3edca57e2cccc8ff1048e77435580f941a4287",
+      "extraction": "whole-file-byte-identical",
+      "sha256": "a24771d1c90c6ee368e599b0be3edca57e2cccc8ff1048e77435580f941a4287",
+      "sizeBytes": 1063
+    },
+    {
+      "path": "renderer/settings.html",
+      "originalPath": "purr-pause/renderer/settings.html",
+      "originalSha256": "f2a23115070cc73bb9cda403e9aed364bf2148e3610f650ec1a609cb73bbbc13",
+      "extraction": "whole-file-byte-identical",
+      "sha256": "f2a23115070cc73bb9cda403e9aed364bf2148e3610f650ec1a609cb73bbbc13",
+      "sizeBytes": 12129
+    },
+    {
+      "path": "renderer/message-settings.html",
+      "originalPath": "purr-pause/renderer/message-settings.html",
+      "originalSha256": "46c7a7b24efa66d2643851772a90e0340e1a5450c436aa8685f36b1b4ac7d1e7",
+      "extraction": "whole-file-byte-identical",
+      "sha256": "46c7a7b24efa66d2643851772a90e0340e1a5450c436aa8685f36b1b4ac7d1e7",
+      "sizeBytes": 37738
+    },
+    {
+      "path": "renderer/message-list.html",
+      "originalPath": "purr-pause/renderer/message-list.html",
+      "originalSha256": "c84fc89701e54829643d275df20a3cc96b99754789c177ed6dcf751fcaa8092d",
+      "extraction": "whole-file-byte-identical",
+      "sha256": "c84fc89701e54829643d275df20a3cc96b99754789c177ed6dcf751fcaa8092d",
+      "sizeBytes": 17346
+    },
+    {
+      "path": "renderer/activation.html",
+      "originalPath": "purr-pause/renderer/activation.html",
+      "originalSha256": "da666e20ebfbd87b986af6caa1150783f7f420a5736d1bf99c33fdddad35d147",
+      "extraction": "whole-file-byte-identical",
+      "sha256": "da666e20ebfbd87b986af6caa1150783f7f420a5736d1bf99c33fdddad35d147",
+      "sizeBytes": 8396
+    },
+    {
+      "path": "renderer/rules.html",
+      "originalPath": "purr-pause/renderer/rules.html",
+      "originalSha256": "0fac81112a27170fbc3588a7eae88a0ed8a8f1c45cf8d7788a3f79b9b3488d2c",
+      "extraction": "whole-file-byte-identical",
+      "sha256": "0fac81112a27170fbc3588a7eae88a0ed8a8f1c45cf8d7788a3f79b9b3488d2c",
+      "sizeBytes": 3405
+    },
+    {
+      "path": "renderer/index.html",
+      "originalPath": "purr-pause/renderer/index.html",
+      "originalSha256": "38d34e75953ddc8563e36c1a6fb9d5b112d44657dbf23479726f8effd5832449",
+      "extraction": "whole-file-byte-identical",
+      "sha256": "38d34e75953ddc8563e36c1a6fb9d5b112d44657dbf23479726f8effd5832449",
+      "sizeBytes": 21578
+    },
+    {
+      "path": "renderer/rocket-demo.html",
+      "originalPath": "purr-pause/renderer/rocket-demo.html",
+      "originalSha256": "eec7d7a08871a640a4897ff4c5e7f617549b0d14328382f57d5d0e1b41938189",
+      "extraction": "whole-file-byte-identical",
+      "sha256": "eec7d7a08871a640a4897ff4c5e7f617549b0d14328382f57d5d0e1b41938189",
+      "sizeBytes": 18123
+    }
+  ]
+}
